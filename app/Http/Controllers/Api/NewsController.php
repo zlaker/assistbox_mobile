@@ -30,6 +30,7 @@ class NewsController extends Controller
         $news = $articles->map(function (Article $article) {
             return [
                 'id' => $article->id,
+                'title' => $article->title,
                 'text' => $article->text,
                 'created_at' => $article->created_at,
             ];
