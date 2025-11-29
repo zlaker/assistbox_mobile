@@ -145,7 +145,7 @@ return [
 
     'features' => [
         // Отключаем регистрацию новых пользователей
-        // Features::registration(),
+        Features::registration(),
         Features::resetPasswords(),
         Features::emailVerification(),
         Features::twoFactorAuthentication([
