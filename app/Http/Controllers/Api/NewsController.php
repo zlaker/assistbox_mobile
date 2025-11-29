@@ -27,8 +27,19 @@ class NewsController extends Controller
             ->orderByDesc('id')
             ->get();
 
+        $news = $articles->map(function (Article $article) {
+            return [
+                'id' => $article->id,
+                'text' => $article->text,
+                'created_at' => $article->created_at,
+            ];
+        });
+
         return response()->json([
-            'data' => $articles,
+            'data' => [
+                'user_id' => $user->id,
+                'news' => $news,
+            ],
         ]);
     }
 }
