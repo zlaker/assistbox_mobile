@@ -24,9 +24,7 @@ class ResolveUserByDeviceId
         }
 
         if (empty($deviceId)) {
-            return response()->json([
-                'message' => 'Missing required header: device_id',
-            ], 400);
+            abort(403);
         }
 
         $user = User::query()->where('device_id', $deviceId)->first();
