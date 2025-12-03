@@ -14,4 +14,19 @@ Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Public iOS Privacy Policy page
+Route::get('/ios/privacy', function () {
+    return view('ios.privacy');
+})->name('ios.privacy');
+
+// Public iOS Support page
+Route::get('/ios/support', function () {
+    return view('ios.support');
+})->name('ios.support');
+
+// Public iOS Terms of Use page
+Route::get('/ios/terms', function () {
+    return view('ios.terms');
+})->name('ios.terms');
+
 require __DIR__.'/settings.php';
