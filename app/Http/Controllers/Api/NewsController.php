@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -31,7 +32,7 @@ class NewsController extends Controller
             return [
                 'id' => $article->id,
                 'title' => $article->title,
-                'text' => $article->text,
+                'text' => Str::markdown($article->text),
                 'created_at' => $article->created_at,
             ];
         });
