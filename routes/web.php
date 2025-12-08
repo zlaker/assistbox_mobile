@@ -3,11 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
+use App\Http\Controllers\Admin\SupportTicketController;
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canRegister' => Features::enabled(Features::registration()),
-    ]);
+//    return Inertia::render('Welcome', [
+//        'canRegister' => Features::enabled(Features::registration()),
+//    ]);
 })->name('home');
 
 Route::get('dashboard', function () {
@@ -30,3 +31,9 @@ Route::get('/ios/terms', function () {
 })->name('ios.terms');
 
 require __DIR__.'/settings.php';
+
+// Admin dashboard: Support tickets (auth only)
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/admin/support', [SupportTicketController::class, 'index'])->name('admin.support.index');
+    Route::patch('/admin/support/{ticket}', [SupportTicketController::class, 'update'])->name('admin.support.update');
+});

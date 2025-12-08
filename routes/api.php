@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\NewsReadController;
+use App\Http\Controllers\Api\SupportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,7 @@ Route::get('news', [NewsController::class, 'index']);
 
 // Mark specific article as read by current custom_user (per device)
 Route::post('news/read/{article_id}', [NewsReadController::class, 'store']);
+
+// iOS Support endpoints
+Route::post('ios/support', [SupportController::class, 'store']);
+Route::get('ios/support/tickets', [SupportController::class, 'tickets']);
