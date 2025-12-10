@@ -1,0 +1,1349 @@
+@@include("partials/dark-theme.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Techwind"})
+
+        <!-- Css -->
+        <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+    
+    @@include("partials/body.html")
+
+        <span class="fixed blur-[200px] lg:size-[600px] size-[400px] rounded-full top-[10%] md:start-[10%] -start-[20%] bg-primary/20"></span>
+        <span class="fixed blur-[200px] lg:size-[600px] size-[400px] rounded-full bottom-[10%] md:end-[10%] -end-[20%] bg-red-600/20"></span>
+        
+        @@include("partials/navbar/nav-center.html")
+
+        <!-- Start Hero -->
+        <section class="relative table w-full lg:py-40 md:py-36 pt-36 pb-24 overflow-hidden bg-white dark:bg-slate-900">
+            <div class="absolute inset-0 bg-[url('../../assets/images/overlay.png')] bg-repeat opacity-10 dark:opacity-60"></div>
+            <div class="container relative z-1">
+                <div class="relative grid lg:grid-cols-12 grid-cols-1 items-center mt-10 gap-[30px]">
+                    <div class="lg:col-span-7">
+                        <div class="lg:me-6 lg:text-start text-center">
+                            <h1 class="font-bold lg:leading-normal leading-normal text-4xl lg:text-6xl mb-5">Access powerful AI <br>For <span class="typewrite bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text" data-period="2000" data-type='[ "Ai Content", "Blog Writing", "Technical Writing" ]'> <span class="wrap"></span> </span></h1>
+                            <p class="text-lg max-w-xl lg:ms-0 mx-auto">Beatae cum eius, animi itaque aliquid ducimus facere dicta, vitae ipsam maiores nam sit blanditiis, quisquam expedita?</p>
+                        
+                            <div class="subcribe-form mt-6 mb-3">
+                                <form class="relative max-w-md mx-auto lg:ms-0">
+                                    <div class="relative">
+                                        <i class="uil uil-envelope text-xl absolute top-3 left-5"></i>
+                                        <input type="email" id="aiemail" name="email" class="py-4 pe-40 ps-12 w-full h-[50px] outline-none text-slate-900 dark:text-white rounded-md bg-white/60 dark:bg-slate-900/60 shadow-sm dark:shadow-gray-800" placeholder="support@techwind.com">
+                                    </div>
+                                    <button type="submit" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center absolute top-[2px] end-[3px] h-[46px] bg-primary hover:bg-primary-700 border border-primary hover:border-primary-700 text-white rounded-md">Sign Up</button>
+                                </form><!--end form-->
+                            </div>
+                        </div>
+                    </div><!--end col-->
+
+                    <div class="lg:col-span-5">
+                        <div class="relative after:content-[''] after:absolute lg:after:-top-0 after:-top-10 after:-right-32 after:size-[36rem] after:border-2 after:border-dashed after:border-slate-300 dark:after:border-slate-700 after:rounded-full after:animate-[spin_120s_linear_infinite] after:-z-1 before:content-[''] before:absolute lg:before:-top-24 before:-top-36 before:-right-56 before:size-[48rem] before:border-2 before:border-dashed before:border-slate-200 dark:before:border-slate-700 before:rounded-full before:animate-[spin_240s_linear_infinite] before:-z-1">
+                            <div class="relative after:content-[''] after:absolute lg:after:-top-0 after:-top-10 after:-right-40 after:size-[36rem] after:bg-gradient-to-tl after:to-primary/30  after:from-red-600/30 dark:after:to-primary/50 dark:after:from-red-600/50 after: after:blur-[200px] after:rounded-full after:-z-1">
+                                <img src="assets/images/saas/light-dash.png" class="lg:max-w-none lg:ms-14" alt="">
+                            </div>
+                        </div>
+                    </div><!--end col-->
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End Hero -->
+
+        <!-- Business Partner -->
+        <section class="pt-6">
+            <div class="container relative">
+                <div class="grid md:grid-cols-6 grid-cols-2 justify-center gap-[30px]">
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/amazon.svg" class="h-6" alt="">
+                    </div>
+
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/google.svg" class="h-6" alt="">
+                    </div>
+                    
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/lenovo.svg" class="h-6" alt="">
+                    </div>
+                    
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/paypal.svg" class="h-6" alt="">
+                    </div>
+                    
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/shopify.svg" class="h-6" alt="">
+                    </div>
+                    
+                    <div class="mx-auto pt-6">
+                        <img src="assets/images/client/spotify.svg" class="h-6" alt="">
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- Business Partner -->
+
+        <!-- STart -->
+        <section class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid md:grid-cols-3 grid-cols-1 shadow-sm shadow-gray-300 dark:shadow-gray-500 rounded-lg md:divide-x-[1px] md:divide-y-0 divide-y-[1px] divide-gray-200 dark:divide-gray-700">
+                    <div class="relative p-6 md:p-8">
+                        <i class="mdi mdi-account-search-outline bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text text-[45px]"></i>
+
+                        <h5 class="text-xl font-semibold my-5">Search & Write Content</h5>
+
+                        <p class="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+
+                        <i class="mdi mdi-account-search-outline absolute bottom-0 end-0 -z-1 opacity-5 text-9xl"></i>
+
+                        <span class="uil uil-angle-right-bsize-8 bg-primary text-white rounded-full flex justify-center items-center absolute md:top-2/4 md:-translate-y-2/4 -bottom-4 md:-end-0 end-2/4 ltr:translate-x-2/4 rtl:-translate-x-2/4 rtl:rotate-180 z-1"></span>
+                    </div><!--end content-->
+
+                    <div class="relative p-6 md:p-8">
+                        <i class="mdi mdi-wallet-bifold-outline bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text text-[45px]"></i>
+
+                        <h5 class="text-xl font-semibold my-5">Discribe Content</h5>
+
+                        <p class="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+
+                        <i class="mdi mdi-wallet-bifold-outline absolute bottom-0 end-0 -z-1 opacity-5 text-9xl"></i>
+
+                        <span class="uil uil-angle-right-bsize-8 bg-primary text-white rounded-full flex justify-center items-center absolute md:top-2/4 md:-translate-y-2/4 -bottom-4 md:-end-0 end-2/4 ltr:translate-x-2/4 rtl:-translate-x-2/4 rtl:rotate-180 z-1"></span>
+                    </div><!--end content-->
+
+                    <div class="relative p-6 md:p-8">
+                        <i class="mdi mdi-home-plus-outline bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text text-[45px]"></i>
+
+                        <h5 class="text-xl font-semibold my-5">Generate Content</h5>
+
+                        <p class="text-slate-400">If the distribution of letters and 'words' is random, the reader will not be distracted from making.</p>
+
+                        <i class="mdi mdi-home-plus-outline absolute bottom-0 end-0 -z-1 opacity-5 text-9xl"></i>
+                    </div><!--end content-->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                    <div class="relative overflow-hidden rounded-lg border border-primary/40 bg-primary/10 dark:bg-primary/20 lg:ps-12 ps-8 lg:pt-12 pt-8 lg:me-8">
+                        <img src="assets/images/saas/1.png" class="ltr:rounded-tl-lg rtl:rounded-tr-lg" alt="">
+                    </div>
+
+                    <div class="">
+                        <h3 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Create Content In Single <br> Click With AI Power</h3>
+                        <p class="text-slate-400 max-w-xl">You can combine all the Techwind templates into a single one, you can take a component from the Application theme and use it in the Website.</p>
+
+                        <ul class="list-none text-slate-400 mt-4">
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Digital Marketing Solutions for Tomorrow</li>
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Our Talented & Experienced Marketing Agency</li>
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Create your own skin to match your brand</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="page-aboutus.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Find Out More <i class="uil uil-angle-right-b align-middle"></i></a>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-[30px]">
+                    <div class="relative order-1 md:order-2">
+                        <div class="relative overflow-hidden rounded-lg border border-primary/40 bg-primary/10 dark:bg-primary/20 lg:pe-12 pe-8 lg:pt-12 pt-8 lg:ms-8">
+                            <img src="assets/images/saas/2.png" class="ltr:rounded-tr-lg rtl:rounded-tl-lg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="order-2 md:order-1">
+                        <h4 class="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">Write Blog Posts, <br> Stories, & Even Books</h4>
+                        <p class="text-slate-400">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts. If the distribution of letters visual impact.</p>
+                        <ul class="list-none text-slate-400 mt-4">
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Digital Marketing Solutions for Tomorrow</li>
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Our Talented & Experienced Marketing Agency</li>
+                            <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Create your own skin to match your brand</li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="page-aboutus.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Find Out More <i class="uil uil-angle-right-b align-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px] relative">
+                    <div class="lg:col-span-8 md:col-span-12">
+                        <div class="grid grid-cols-1 pb-8">
+                            <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">AI Generate Content In Seconds</h3>
+        
+                            <p class="text-slate-400 max-w-xl">Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind CSS v4.x html page.</p>
+                        </div><!--end grid-->
+                    
+                        <div class="grid md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-flip-h text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Plagiarism checker</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-envelope-upload text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Content Generator</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-star text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Search Engine Optimization</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-bookmark text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Digital name generator</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-4 md:col-span-12">
+                        <div class="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-[30px]">
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-users-alt text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Ad Targeting tips</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-6 py-10 shadow-sm hover:shadow-md dark:shadow-gray-800 dark:hover:shadow-gray-700 duration-500 rounded-lg hover:bg-white hover:dark:bg-slate-900">
+                                <i class="uil uil-comments text-4xl bg-gradient-to-tl to-primary from-red-600 text-transparent bg-clip-text"></i>
+        
+                                <div class="content mt-7">
+                                    <a href="page-services.html" class="title h5 text-lg font-medium hover:text-primary">Content Rewriter</a>
+                                    <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                                    
+                                    <div class="mt-5">
+                                        <a href="page-services.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Read More <i class="uil uil-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--grid-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">What Our Users Say</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">Start working with Tailwind CSS that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container-fluid relative overflow-hidden">
+                <div class="grid grid-cols-1 mt-8">
+                    <div class="slider relative overflow-hidden m-auto mb-4 before:content-[''] before:absolute before:top-0 before:start-0 before:z-2 after:content-[''] after:absolute after:top-0 after:end-0 after:z-2">
+                        <div class="slide-track flex items-center">
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/01.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Thomas Israel</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I didn't know a thing about icon design until I read this book. Now I can create any icon I need in no time. Great resource!</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/05.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">There are so many things I had to do with my old software that I just don't do at all with Techwind. Suspicious but I can't say I don't love it.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/02.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Carl Oliver</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">The best part about Techwind is every time I pay my employees, my bank balance doesn't go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/04.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Jill Webb</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I'm trying to get a hold of someone in support, I'm in a lot of trouble right now and they are saying it has something to do with my books. Please get back to me right away.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="slide h-auto md:w-[360px] w-72 m-2">
+                                <ul class="space-y-4">
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/03.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Barbara McIntosh</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">I used to have to remit tax to the EU and with Techwind I somehow don't have to do that anymore. Nervous to travel there now though.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+            
+                                    <li class="rounded-lg shadow-sm dark:shadow-gray-800 p-6 border-b-4 border-primary">
+                                        <div class="flex items-center pb-6 border-b border-gray-200 dark:border-gray-800">
+                                            <img src="assets/images/client/06.jpg" class="size-16 rounded-full shadow-sm dark:shadow-gray-800" alt="">
+            
+                                            <div class="ps-4">
+                                                <a href="" class="text-lg hover:text-primary duration-500 ease-in-out">Janisha Doll</a>
+                                                <p class="text-slate-400">User</p>
+                                            </div>
+                                        </div>
+            
+                                        <div class="mt-6">
+                                            <p class="text-slate-400">This is the fourth email I've sent to your support team. I am literally being held in jail for tax fraud. Please answer your damn emails, this is important.</p>
+                                            <ul class="list-none mb-0 text-amber-400 mt-2">
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                                <li class="inline"><i class="mdi mdi-star"></i></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid lg:grid-cols-12 md:grid-cols-2 grid-cols-1 items-center md:gap-[30px]">
+                    <div class="lg:col-span-4 md:mb-0 mb-8">
+                        <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Frequently Asked Questions</h3>
+
+                        <p class="text-slate-400 max-w-xl mx-auto mb-6">Start working with Tailwind CSS that can provide everything you need to generate awareness, drive traffic, connect.</p>
+
+                        <a href="" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-primary text-slate-900 dark:text-white hover:text-white rounded-full">Contact Us</a>
+                    </div>
+
+                    <div class="lg:col-span-8 md:mt-0 mt-8" id="accordion-collapse" data-accordion="collapse">
+                        <div class="relative shadow-sm dark:shadow-gray-800 rounded-md overflow-hidden">
+                            <h2 class="text-base font-semibold" id="accordion-collapse-heading-1">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+                                    <span>How does it work ?</span>
+                                    <svg data-accordion-icon class="size-4 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="relative shadow-sm dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-base font-semibold" id="accordion-collapse-heading-2">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
+                                    <span>Do I need a designer to use Techwind ?</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="relative shadow-sm dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-base font-semibold" id="accordion-collapse-heading-3">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
+                                    <span>What do I need to do to start selling ?</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative shadow-sm dark:shadow-gray-800 rounded-md overflow-hidden mt-4">
+                            <h2 class="text-base font-semibold" id="accordion-collapse-heading-4">
+                                <button type="button" class="flex justify-between items-center p-5 w-full font-medium text-start" data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
+                                    <span>What happens when I receive an order ?</span>
+                                    <svg data-accordion-icon class="size-4 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
+                                <div class="p-5">
+                                    <p class="text-slate-400 dark:text-gray-400">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end grid-->
+                </div><!--end grid-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-[26px] md:leading-normal text-2xl leading-normal font-semibold">Our Pricing Plans</h3>
+
+                    <p class="text-slate-400 max-w-xl mx-auto">Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind css html page.</p>
+                </div><!--end grid-->
+
+                <div class="grid grid-cols-1 mt-8 gap-[30px]">
+                    <div class="group md:flex items-center justify-between p-6 rounded-lg shadow-sm dark:shadow-gray-700">
+                        <div class="lg:flex items-center justify-between lg:w-2/4">
+                            <div class="lg:mb-0 mb-5">
+                                <h5 class="text-2xl font-semibold">Free</h5>
+                                <p class="text-slate-400 lg:w-[200px] md:w-[300px] mt-2">We offers a free month of service for new customers.</p>
+                            </div>
+    
+                            <ul class="list-none text-slate-400 md:mb-0 mb-5">
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Full Access</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Source Files</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Free Appointments</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Enhanced Security</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex md:mb-0 mb-5">
+                            <span class="text-xl font-semibold">$</span>
+                            <span class="price text-4xl font-semibold mb-0">0</span>
+                            <span class="text-xl font-semibold self-end mb-1">/mo</span>
+                        </div>
+
+                        <a href="" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-primary text-slate-900 dark:text-white hover:text-white rounded-full">Signup</a>
+                    </div><!--end content-->
+
+                    <div class="group md:flex items-center justify-between p-6 rounded-lg shadow-sm dark:shadow-gray-700">
+                        <div class="lg:flex items-center justify-between lg:w-2/4">
+                            <div class="lg:mb-0 mb-5">
+                                <h5 class="text-2xl font-semibold">Starter</h5>
+                                <p class="text-slate-400 lg:w-[200px] md:w-[300px] mt-2">We offers a free month of service for new customers.</p>
+                            </div>
+    
+                            <ul class="list-none text-slate-400 md:mb-0 mb-5">
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Full Access</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Source Files</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Free Appointments</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Enhanced Security</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex md:mb-0 mb-5">
+                            <span class="text-xl font-semibold">$</span>
+                            <span class="price text-4xl font-semibold mb-0">9</span>
+                            <span class="text-xl font-semibold self-end mb-1">/mo</span>
+                        </div>
+
+                        <a href="" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-primary text-slate-900 dark:text-white hover:text-white rounded-full">Buy Now</a>
+                    </div><!--end content-->
+
+                    <div class="group md:flex items-center justify-between p-6 rounded-lg shadow-sm dark:shadow-gray-700">
+                        <div class="lg:flex items-center justify-between lg:w-2/4">
+                            <div class="lg:mb-0 mb-5">
+                                <h5 class="text-2xl font-semibold">Business</h5>
+                                <p class="text-slate-400 lg:w-[200px] md:w-[300px] mt-2">We offers a free month of service for new customers.</p>
+                            </div>
+    
+                            <ul class="list-none text-slate-400 md:mb-0 mb-5">
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Full Access</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Source Files</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Free Appointments</li>
+                                <li class="mb-1 flex"><i class="uil uil-check-circle text-primary text-xl me-2"></i> Enhanced Security</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex md:mb-0 mb-5">
+                            <span class="text-xl font-semibold">$</span>
+                            <span class="price text-4xl font-semibold mb-0">29</span>
+                            <span class="text-xl font-semibold self-end mb-1">/mo</span>
+                        </div>
+
+                        <a href="" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary border-gray-100 dark:border-gray-800 hover:border-primary dark:hover:border-primary text-slate-900 dark:text-white hover:text-white rounded-full">Started now</a>
+                    </div><!--end content-->
+                </div><!--end-->
+            </div><!--end container-->
+
+            <div class="container relative md:mt-24 mt-16 z-2">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center">
+                    <div class="lg:col-span-5 md:col-span-6">
+                        <img src="assets/images/illustrator/envelope.svg" class="mx-auto d-block" alt="">
+                    </div>
+
+                    <div class="lg:col-span-7 md:col-span-6">
+                        <span class="bg-primary/5 text-primary text-xs font-bold px-2.5 py-0.5 rounded h-5">Mobile Apps</span>
+                        <h4 class="md:text-3xl text-2xl lg:leading-normal leading-normal font-medium my-4">Available for your <br> Smartphones</h4>
+                        <p class="text-slate-400 max-w-xl mb-0">Search all the open positions on the web. Get your own personalized salary estimate. Read reviews on over 30000+ companies worldwide.</p>
+                        <div class="my-5">
+                            <a href=""><img src="assets/images/app/app.png" class="m-1 inline-block" alt=""></a>
+
+                            <a href=""><img src="assets/images/app/playstore.png" class="m-1 inline-block" alt=""></a>
+                        </div>
+
+                        <div class="inline-block">
+                            <div class="pt-4 flex items-center border-t border-gray-100 dark:border-gray-800">
+                                <i data-feather="smartphone" class="me-2 text-primary size-10"></i>
+                                <div class="content">
+                                    <h6 class="text-base font-medium">Install app now on your cellphones</h6>
+                                    <a href="" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-primary hover:text-primary after:bg-primary duration-500 ease-in-out">Learn More <i class="uil uil-angle-right-b"></i></a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--end gird-->
+            </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
+
+        @@include("partials/footer/footer-transparent.html")
+
+        @@include("partials/cookies.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-primary text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        @@include("partials/switcher.html")
+
+        <!-- JAVASCRIPTS -->
+        <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        @@include("partials/script-file.html")
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

@@ -1,0 +1,373 @@
+@@include("partials/main.html")
+    <head>
+        @@include("partials/title-meta.html", {"title": "Assistbox — персональный ассистент и каталог"})
+
+        <!-- Css -->
+        <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
+        <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        @@include("partials/head-css.html")
+    </head>
+
+    @@include("partials/body.html")
+
+        @@include("partials/navbar/nav-center.html")
+
+        <!-- HERO -->
+        <section class="relative md:py-40 py-28 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10">
+            <div class="container relative">
+                <div class="grid lg:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="lg:col-span-7">
+                        <h1 class="font-bold lg:text-5xl text-4xl leading-tight mb-6">Персональный ассистент и каталог услуг в одном месте</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg max-w-2xl">Assistbox объединяет каталог организаций, мастеров, услуг и вакансий с умным вводом через AI. Нет привязки к городу — ведите свой удобный справочник для любого места. Забудьте скучные формы: опишите идею обычным языком — ассистент сам заполнит карточки.</p>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-3">
+                            <a href="#cta" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-700 border-primary hover:border-primary-700 text-white rounded-md">Начать</a>
+                            <a href="#catalog" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-transparent hover:bg-primary/10 border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-md">Попробовать добавить услугу</a>
+                        </div>
+
+                        <ul class="mt-8 grid sm:grid-cols-2 grid-cols-1 gap-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex items-center"><i data-feather="check" class="me-2 size-5 text-primary"></i>Каталог организаций и мастеров</li>
+                            <li class="flex items-center"><i data-feather="check" class="me-2 size-5 text-primary"></i>События и покупки с отсчётом времени</li>
+                            <li class="flex items-center"><i data-feather="check" class="me-2 size-5 text-primary"></i>Калории и тренировки</li>
+                            <li class="flex items-center"><i data-feather="check" class="me-2 size-5 text-primary"></i>Платежи и карты лояльности</li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-5 mt-8 lg:mt-0">
+                        <div class="rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800 p-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="rounded-xl bg-primary/5 p-4">
+                                    <p class="text-sm text-primary font-semibold mb-1">AI-ввод</p>
+                                    <p class="text-slate-500 text-sm">Опишите текстом — получайте готовые карточки.</p>
+                                </div>
+                                <div class="rounded-xl bg-emerald-500/5 p-4">
+                                    <p class="text-sm text-emerald-600 font-semibold mb-1">Без города</p>
+                                    <p class="text-slate-500 text-sm">Работает в любом городе, в вашем ритме.</p>
+                                </div>
+                                <div class="rounded-xl bg-amber-500/5 p-4">
+                                    <p class="text-sm text-amber-600 font-semibold mb-1">Отсчёт времени</p>
+                                    <p class="text-slate-500 text-sm">События, покупки и напоминания под контролем.</p>
+                                </div>
+                                <div class="rounded-xl bg-fuchsia-500/5 p-4">
+                                    <p class="text-sm text-fuchsia-600 font-semibold mb-1">Живое развитие</p>
+                                    <p class="text-slate-500 text-sm">Постоянные обновления по запросам пользователей.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden text-white dark:text-slate-900">
+                <svg class="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+                </svg>
+            </div>
+        </section>
+        <!-- /HERO -->
+
+        <!-- ЧТО УМЕЕТ ASSISTBOX -->
+        <section id="features" class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h2 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">Что умеет Assistbox</h2>
+                    <p class="text-slate-400 max-w-3xl mx-auto">Сервис сочетает мощный каталог и персональные инструменты жизни: финансы, события, здоровье, тренировки и напоминания — всё с удобным AI-вводом.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-[30px] mt-8">
+                    <!-- Карточка 1: Каталог и услуги -->
+                    <div class="p-6 rounded-2xl hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 duration-500 bg-white dark:bg-slate-900">
+                        <div class="size-16 bg-primary/5 text-primary rounded-xl text-2xl flex items-center justify-center shadow-xs dark:shadow-gray-800">
+                            <i class="uil uil-browser"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold">Каталог и услуги</h3>
+                        <ul class="mt-3 text-slate-500 space-y-2">
+                            <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Организации и учреждения: адрес, контакты, теги, статус «работает/перерыв/выходной».</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Мастера и персональные страницы услуг (мини‑лендинги).</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Вакансии по тегам и категориям.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Нет привязки к городу — ваш личный справочник в любом месте.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Карточка 2: Финансы и покупки -->
+                    <div class="p-6 rounded-2xl hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 duration-500 bg-white dark:bg-slate-900">
+                        <div class="size-16 bg-emerald-500/5 text-emerald-600 rounded-xl text-2xl flex items-center justify-center shadow-xs dark:shadow-gray-800">
+                            <i class="uil uil-transaction"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold">Финансы и покупки</h3>
+                        <ul class="mt-3 text-slate-500 space-y-2">
+                            <li class="flex"><i data-feather="check" class="me-2 text-emerald-600"></i>Покупки: дата, сумма, категория и отсчёт времени с покупки.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-emerald-600"></i>Карты лояльности: хранение данных, напоминания о бонусах.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-emerald-600"></i>Платежи: кредиты, коммуналка, подписки; статусы «оплачен/не оплачен».</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-emerald-600"></i>Календарь и напоминания по оплатам.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Карточка 3: Здоровье и образ жизни -->
+                    <div class="p-6 rounded-2xl hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 duration-500 bg-white dark:bg-slate-900">
+                        <div class="size-16 bg-rose-500/5 text-rose-600 rounded-xl text-2xl flex items-center justify-center shadow-xs dark:shadow-gray-800">
+                            <i class="uil uil-heartbeat"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold">Здоровье и образ жизни</h3>
+                        <ul class="mt-3 text-slate-500 space-y-2">
+                            <li class="flex"><i data-feather="check" class="me-2 text-rose-600"></i>Калькулятор калорий: персональные продукты и рецепты, учёт БЖУ и веса порций.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-rose-600"></i>Быстрое добавление блюд через текст — AI структурирует данные.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-rose-600"></i>Тренировки: упражнения, подходы/повторы, показ предыдущих результатов.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-rose-600"></i>Режим «персональный тренер»: ведите неограниченное число людей.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Карточка 4: События и напоминания -->
+                    <div class="p-6 rounded-2xl hover:shadow-xl hover:shadow-gray-100 dark:hover:shadow-gray-800 duration-500 bg-white dark:bg-slate-900">
+                        <div class="size-16 bg-amber-500/5 text-amber-600 rounded-xl text-2xl flex items-center justify-center shadow-xs dark:shadow-gray-800">
+                            <i class="uil uil-bell"></i>
+                        </div>
+                        <h3 class="mt-6 text-lg font-semibold">События и напоминания</h3>
+                        <ul class="mt-3 text-slate-500 space-y-2">
+                            <li class="flex"><i data-feather="check" class="me-2 text-amber-600"></i>Личные события: «поменяла линзы», «ТО автомобиля», «стоматолог» и др.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-amber-600"></i>Отсчёт времени с момента события — легко понять, когда пора повторить.</li>
+                            <li class="flex"><i data-feather="check" class="me-2 text-amber-600"></i>Real‑time обновления и пуш‑напоминания, чтобы ничего не забыть.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI-ПОМОЩНИК -->
+        <section id="ai" class="relative md:py-24 py-16 bg-slate-50 dark:bg-slate-800/30">
+            <div class="container relative">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="md:col-span-6">
+                        <h3 class="mb-4 md:text-3xl text-2xl font-semibold">AI‑помощник: забудьте формы и бесконечные поля</h3>
+                        <p class="text-slate-500 dark:text-slate-400">Пишите обычным языком: «Парикмахер Анна, центр, с 10 до 20, выходной — понедельник, телефон …». Assistbox автоматически превратит этот текст в структурированную карточку с названием, описанием, контактами, расписанием, тегами и прочим.</p>
+                        <ul class="mt-5 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="zap" class="me-2 text-primary"></i>Минимум действий и нулевая рутина</li>
+                            <li class="flex"><i data-feather="edit-3" class="me-2 text-primary"></i>Поддержка организаций, услуг, вакансий, событий, тренировок, продуктов и рецептов</li>
+                            <li class="flex"><i data-feather="clock" class="me-2 text-primary"></i>Скорость и лёгкость — опишите, а остальное сделает ассистент</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-6">
+                        <div class="rounded-2xl shadow-sm dark:shadow-gray-800 bg-white dark:bg-slate-900 p-6">
+                            <p class="text-slate-400 text-sm">Примеры свободного ввода:</p>
+                            <div class="mt-3 grid sm:grid-cols-2 grid-cols-1 gap-3">
+                                <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">«Магазин электроники, пн‑пт 10:00–20:00, сб 11:00–18:00, вс выходной, телефон …»</p>
+                                </div>
+                                <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">«Калькулятор: Рецепт — омлет 2 яйца, 50 г сыра, 10 г масла»</p>
+                                </div>
+                                <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">«Тренировка спина и ноги, 3 раза в неделю, таймер отдыха 90 секунд»</p>
+                                </div>
+                                <div class="border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+                                    <p class="text-slate-600 dark:text-slate-300 text-sm">«Покупка: утюг, 4 990 ₽, 12.05.2024 — хочу отслеживать срок службы»</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАТАЛОГ / СПРАВОЧНИК (детализация) -->
+        <section id="catalog" class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h3 class="mb-4 md:text-3xl text-2xl font-semibold">Каталог / справочник</h3>
+                    <p class="text-slate-400 max-w-3xl mx-auto">Полный каталог организаций, мастеров и вакансий. Создавайте персональные страницы услуг. Работает в любом городе.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] mt-8">
+                    <div class="p-6 rounded-2xl shadow-sm dark:shadow-gray-800 bg-white dark:bg-slate-900">
+                        <h4 class="text-lg font-semibold">Организации и учреждения</h4>
+                        <p class="text-slate-500 mt-2">Карточки с названием, адресом, описанием, тегами и статусом работы; поддержка расписаний и контактов.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl shadow-sm dark:shadow-gray-800 bg-white dark:bg-slate-900">
+                        <h4 class="text-lg font-semibold">Мастера и услуги</h4>
+                        <p class="text-slate-500 mt-2">Персональные страницы мастеров: описание, адрес, контакты, теги. Создайте собственный мини‑лендинг услуги.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl shadow-sm dark:shadow-gray-800 bg-white dark:bg-slate-900">
+                        <h4 class="text-lg font-semibold">Вакансии</h4>
+                        <p class="text-slate-500 mt-2">Хранение и поиск по тегам и категориям как часть ассистента и каталога.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- СОБЫТИЯ И ПОКУПКИ -->
+        <section id="events" class="relative md:py-24 py-16 bg-slate-50 dark:bg-slate-800/30">
+            <div class="container relative">
+                <div class="grid lg:grid-cols-2 grid-cols-1 gap-[30px] items-start">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                        <h4 class="text-lg font-semibold">События</h4>
+                        <p class="text-slate-500 mt-2">Личные события вроде «поменяла линзы», «ТО автомобиля», «сходить к стоматологу». Ключевая фишка — отсчёт времени с момента события.</p>
+                        <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="clock" class="me-2 text-primary"></i>Показывает, сколько прошло — легко понять, когда пора повторить.</li>
+                            <li class="flex"><i data-feather="bell" class="me-2 text-primary"></i>Напоминания и уведомления там, где важно.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                        <h4 class="text-lg font-semibold">Покупки</h4>
+                        <p class="text-slate-500 mt-2">Учитывайте дату, сумму, категорию. Сервис считает, сколько дней вы пользуетесь покупкой, помогает планировать замены и сервис.</p>
+                        <ul class="mt-3 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="calendar" class="me-2 text-primary"></i>Отслеживание срока службы и анализ покупок.</li>
+                            <li class="flex"><i data-feather="credit-card" class="me-2 text-primary"></i>Карты лояльности: где и какие бонусы доступны.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПЕРСОНАЛЬНЫЙ КАЛОРИЙНЫЙ АССИСТЕНТ -->
+        <section id="calories" class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="md:col-span-6">
+                        <h3 class="mb-4 md:text-3xl text-2xl font-semibold">Персональный калорийный ассистент</h3>
+                        <p class="text-slate-500">Создавайте свои продукты и рецепты с учётом ингредиентов. Учитывайте калории, белки, жиры, углеводы и вес порций. Добавляйте блюда через текст — AI заполнит питательность и состав.</p>
+                        <ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="list" class="me-2 text-primary"></i>Персональные продукты и рецепты</li>
+                            <li class="flex"><i data-feather="sliders" class="me-2 text-primary"></i>Гибкий учёт БЖУ и порций</li>
+                            <li class="flex"><i data-feather="type" class="me-2 text-primary"></i>Свободный ввод текста — без рутины</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-6">
+                        <div class="rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800 p-6">
+                            <div class="grid grid-cols-2 gap-4 text-sm text-slate-500">
+                                <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">Продукт: «гречка 100 г, калории?»</div>
+                                <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">Рецепт: «салат 200 г: курица 120 г, помидор 80 г, масло 10 г»</div>
+                                <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">Порция: «добавь половину рецепта в дневник»</div>
+                                <div class="rounded-xl border border-slate-200 dark:border-slate-700 p-4">Аналитика: «покажи БЖУ за неделю»</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- УЧЁТ ПЛАТЕЖЕЙ -->
+        <section id="payments" class="relative md:py-24 py-16 bg-slate-50 dark:bg-slate-800/30">
+            <div class="container relative">
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                        <h4 class="text-lg font-semibold">Ассистент по платежам</h4>
+                        <p class="text-slate-500 mt-2">Регулярные платежи: кредиты, коммуналка, подписки. Шаблоны оплат и статусы «оплачен/не оплачен».</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                        <h4 class="text-lg font-semibold">Календарь и напоминания</h4>
+                        <p class="text-slate-500 mt-2">Видно, когда и что оплатить. Уведомления помогают не пропускать сроки.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                        <h4 class="text-lg font-semibold">Простые списки и карточки</h4>
+                        <p class="text-slate-500 mt-2">«Кредит», «Коммунальные услуги», «Подписки» — всё наглядно и под рукой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ТРЕНИРОВКИ -->
+        <section id="gym" class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-start gap-[30px]">
+                    <div class="md:col-span-6">
+                        <h3 class="mb-4 md:text-3xl text-2xl font-semibold">Тренировки: от базовых до «персонального тренера»</h3>
+                        <p class="text-slate-500">Ведите тренировки, упражнения, подходы и повторы. Видьте прошлые значения по каждому подходу — легко копировать и прогрессировать. Планируйте график на дни, недели и месяцы, а AI поможет составить программу по свободному описанию.</p>
+                        <ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="repeat" class="me-2 text-primary"></i>Подходы и повторы с прошлой статистикой для копирования</li>
+                            <li class="flex"><i data-feather="users" class="me-2 text-primary"></i>Режим «персональный тренер»: неограниченное число тренируемых</li>
+                            <li class="flex"><i data-feather="calendar" class="me-2 text-primary"></i>Планирование на любой период + AI‑составление плана</li>
+                            <li class="flex"><i data-feather="timer" class="me-2 text-primary"></i>Таймеры и счётчики с настройкой через time‑picker</li>
+                            <li class="flex"><i data-feather="tag" class="me-2 text-primary"></i>Именование тренировок: «Грудь #3», иначе — просто номер</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                                <p class="text-sm text-slate-500">«Хочу программу на 3 раза в неделю для спины и ног» — ассистент предложит план.</p>
+                            </div>
+                            <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                                <p class="text-sm text-slate-500">Отсчёт оставшегося времени для подхода/упражнения — всё под контролем.</p>
+                            </div>
+                            <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                                <p class="text-sm text-slate-500">Ведите себя и близких: персональные достижения никогда не потеряются.</p>
+                            </div>
+                            <div class="rounded-2xl p-5 bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800">
+                                <p class="text-sm text-slate-500">Показываем предыдущие результаты, чтобы шагать вперёд без лишних кликов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- УПОМИНАНИЯ, REAL‑TIME И НОТИФИКАЦИИ -->
+        <section id="notify" class="relative md:py-20 py-14 bg-primary/5 dark:bg-primary/10">
+            <div class="container relative">
+                <div class="grid grid-cols-1 text-center">
+                    <h3 class="mb-4 md:text-3xl text-2xl font-semibold">Ничего не забывается</h3>
+                    <p class="text-slate-500 max-w-2xl mx-auto">Assistbox поддерживает напоминания, real‑time‑обновления и пуш‑логіку там, где это важно: события, платежи, тренировки, сроки по покупкам и другое. Вы всегда в курсе.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПОСТОЯННОЕ РАЗВИТИЕ -->
+        <section id="roadmap" class="relative md:py-24 py-16">
+            <div class="container relative">
+                <div class="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="md:col-span-7">
+                        <h3 class="mb-4 md:text-3xl text-2xl font-semibold">Живой сервис: мы постоянно развиваемся</h3>
+                        <p class="text-slate-500">Мы регулярно выпускаем обновления и добавляем новые сущности по вашим запросам. Дорожная карта гибкая — мы слушаем пользователей и улучшаем сервис шаг за шагом.</p>
+                        <ul class="mt-4 space-y-2 text-slate-600 dark:text-slate-300">
+                            <li class="flex"><i data-feather="git-branch" class="me-2 text-primary"></i>Новые виды сущностей и улучшения существующих модулей</li>
+                            <li class="flex"><i data-feather="message-circle" class="me-2 text-primary"></i>Реакция на предложения — фичи появляются быстро</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-5">
+                        <div class="rounded-2xl bg-white dark:bg-slate-900 shadow-sm dark:shadow-gray-800 p-6">
+                            <p class="text-slate-500">Уже доступны в приложении:</p>
+                            <ul class="mt-2 text-slate-600 dark:text-slate-300 space-y-1">
+                                <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Калькулятор калорий</li>
+                                <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Учёт платежей</li>
+                                <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>События и покупки с таймерами</li>
+                                <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Каталог организаций, мастеров, вакансий</li>
+                                <li class="flex"><i data-feather="check" class="me-2 text-primary"></i>Персональные страницы услуг</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="relative md:py-24 py-16 bg-slate-900">
+            <div class="container relative">
+                <div class="grid lg:grid-cols-12 grid-cols-1 items-center gap-[30px]">
+                    <div class="lg:col-span-9">
+                        <h3 class="text-white md:text-3xl text-2xl font-semibold">Готовы начать? Добавьте первую карточку уже сейчас</h3>
+                        <p class="text-slate-300 mt-2">Создавайте организации, услуги, события, покупки, рецепты и тренировки — просто опишите текстом, а AI заполнит детали.</p>
+                    </div>
+                    <div class="lg:col-span-3 lg:text-end mt-6 lg:mt-0">
+                        <a href="#" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-700 border-primary hover:border-primary-700 text-white rounded-md">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include("partials/footer/footer.html")
+
+        @@include("partials/cookies.html")
+
+        <!-- Back to top -->
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-primary text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+        <!-- Back to top -->
+
+        @@include("partials/switcher.html")
+
+        <!-- JAVASCRIPTS -->
+        <script src="assets/libs/tobii/js/tobii.min.js"></script>
+        <script src="assets/libs/tiny-slider/min/tiny-slider.js"></script>
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        @@include("partials/script-file.html")
+        <!-- JAVASCRIPTS -->
+    </body>
+</html>

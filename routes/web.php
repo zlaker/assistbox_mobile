@@ -6,9 +6,7 @@ use Laravel\Fortify\Features;
 use App\Http\Controllers\Admin\SupportTicketController;
 
 Route::get('/', function () {
-//    return Inertia::render('Welcome', [
-//        'canRegister' => Features::enabled(Features::registration()),
-//    ]);
+    return view('landing');
 })->name('home');
 
 Route::get('dashboard', function () {
