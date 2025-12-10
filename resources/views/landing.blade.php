@@ -13,8 +13,8 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!-- favicon -->
-        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
 
         <!-- Css -->
         <link href="{{ asset('landing/assets/libs/tiny-slider/tiny-slider.css') }}" rel="stylesheet">
