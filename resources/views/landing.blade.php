@@ -151,7 +151,6 @@
                         <li><a href="#features" class="sub-menu-item" data-i18n="nav.features">Features</a></li>
                         <li><a href="#about" class="sub-menu-item" data-i18n="nav.statistics">Statistics</a></li>
                         <li><a href="#testimonials" class="sub-menu-item" data-i18n="nav.whyVoxi">Why Voxi</a></li>
-                        <li><a href="#all-features" class="sub-menu-item" data-i18n="nav.allFeatures">All Features</a></li>
                         <li><a href="#download" class="sub-menu-item" data-i18n="nav.download">Download</a></li>
                         <li><a href="#news" class="sub-menu-item" data-i18n="nav.news">News</a></li>
                         <li><a href="{{ route('ios.support') }}" class="sub-menu-item" data-i18n="nav.support">Support</a></li>
