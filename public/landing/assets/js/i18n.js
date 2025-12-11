@@ -1130,10 +1130,46 @@ function applyTranslations(lang) {
 }
 
 /**
- * Get saved language or default
+ * Detect browser/system language
+ * Returns 'ru' for Russian-speaking users, 'en' for everyone else
+ */
+function detectBrowserLanguage() {
+    // Check navigator.languages (array of preferred languages) first
+    const languages = navigator.languages || [navigator.language || navigator.userLanguage];
+    
+    for (const lang of languages) {
+        const langCode = lang.toLowerCase().split('-')[0]; // 'ru-RU' -> 'ru'
+        if (langCode === 'ru') {
+            return 'ru';
+        }
+        // If English is explicitly preferred, use it
+        if (langCode === 'en') {
+            return 'en';
+        }
+    }
+    
+    // Default to English for all other languages
+    return 'en';
+}
+
+/**
+ * Get saved language or detect from browser settings
  */
 function getSavedLanguage() {
-    return localStorage.getItem('voxi_lang') || 'en';
+    const saved = localStorage.getItem('voxi_lang');
+    
+    // If user has manually selected a language, use it
+    if (saved) {
+        return saved;
+    }
+    
+    // Otherwise, detect from browser/system settings
+    const detected = detectBrowserLanguage();
+    
+    // Save the detected language so it persists
+    localStorage.setItem('voxi_lang', detected);
+    
+    return detected;
 }
 
 /**
