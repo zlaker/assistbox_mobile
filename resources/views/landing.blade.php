@@ -2,15 +2,73 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light scroll-smooth" dir="ltr">
     <head>
         <meta charset="UTF-8">
-        <title id="pageTitle">Voxi Book Player - Audiobook Player & Statistics</title>
+        <title id="pageTitle">Voxi Book Player - Audiobook Player & Statistics for iOS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta id="metaDescription" name="description" content="Your personal audiobook library with powerful statistics. Track every moment, never lose progress. Built for everyone, enhanced by community.">
-        <meta id="metaKeywords" name="keywords" content="audiobook, player, statistics, ios, iphone, ipad, books, listening, progress tracking">
-        <meta name="author" content="{{ config('app.name') }}">
+        <meta id="metaDescription" name="description" content="Free audiobook player for iPhone & iPad with powerful listening statistics. Track progress, sleep timer, speed control 0.5x-2.0x, VoiceOver support. Download from App Store.">
+        <meta id="metaKeywords" name="keywords" content="audiobook player, audiobook app, ios audiobook player, iphone audiobook, ipad audiobook, listening statistics, audiobook tracker, sleep timer, voiceover audiobook, free audiobook player, m4b player, mp3 audiobook">
+        <meta name="author" content="Voxi Book Player">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index,follow">
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="{{ url('/') }}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ url('/') }}">
+        <meta property="og:title" content="Voxi Book Player - Audiobook Player & Statistics">
+        <meta property="og:description" content="Free audiobook player for iPhone & iPad with powerful listening statistics. Track every moment, never lose progress.">
+        <meta property="og:image" content="{{ asset('landing/assets/images/app/basic_player_ios.png') }}">
+        <meta property="og:site_name" content="Voxi Book Player">
+        <meta property="og:locale" content="{{ app()->getLocale() }}">
+        <meta property="og:locale:alternate" content="en_US">
+        <meta property="og:locale:alternate" content="ru_RU">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Voxi Book Player - Audiobook Player & Statistics">
+        <meta name="twitter:description" content="Free audiobook player for iPhone & iPad with powerful listening statistics. Track every moment, never lose progress.">
+        <meta name="twitter:image" content="{{ asset('landing/assets/images/app/basic_player_ios.png') }}">
+
+        <!-- App Store Smart Banner -->
+        <meta name="apple-itunes-app" content="app-id=6756003204">
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#4a6fa5">
+        <meta name="msapplication-TileColor" content="#4a6fa5">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <!-- Structured Data (JSON-LD) -->
+        <script type="application/ld+json">
+        {
+            "@@context": "https://schema.org",
+            "@@type": "MobileApplication",
+            "name": "Voxi Book Player",
+            "operatingSystem": "iOS",
+            "applicationCategory": "MultimediaApplication",
+            "offers": {
+                "@@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+                "@@type": "AggregateRating",
+                "ratingValue": "5",
+                "ratingCount": "1"
+            },
+            "description": "Free audiobook player for iPhone & iPad with powerful listening statistics. Track every moment, never lose progress.",
+            "downloadUrl": "https://apps.apple.com/us/app/voxi-book-player/id6756003204",
+            "softwareVersion": "1.0",
+            "author": {
+                "@@type": "Organization",
+                "name": "Voxi Book Player"
+            },
+            "screenshot": "{{ asset('landing/assets/images/app/basic_player_ios.png') }}",
+            "featureList": "Audiobook playback, Listening statistics, Sleep timer, Speed control 0.5x-2.0x, VoiceOver support, Background playback, Lock screen controls"
+        }
+        </script>
 
         <!-- favicon -->
         <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
@@ -93,6 +151,7 @@
                         <li><a href="#features" class="sub-menu-item" data-i18n="nav.features">Features</a></li>
                         <li><a href="#about" class="sub-menu-item" data-i18n="nav.statistics">Statistics</a></li>
                         <li><a href="#testimonials" class="sub-menu-item" data-i18n="nav.whyVoxi">Why Voxi</a></li>
+                        <li><a href="#all-features" class="sub-menu-item" data-i18n="nav.allFeatures">All Features</a></li>
                         <li><a href="#download" class="sub-menu-item" data-i18n="nav.download">Download</a></li>
                         <li><a href="#news" class="sub-menu-item" data-i18n="nav.news">News</a></li>
                         <li><a href="{{ route('ios.support') }}" class="sub-menu-item" data-i18n="nav.support">Support</a></li>
@@ -397,6 +456,353 @@
                 </div>
             </div><!--end container-->
 
+            <!-- All Features Section -->
+            <div id="all-features" class="container relative md:mt-24 mt-16">
+                <div class="grid grid-cols-1 pb-8 text-center">
+                    <h6 class="text-primary text-sm font-bold uppercase mb-2" data-i18n="allFeatures.label">Complete Feature List</h6>
+                    <h3 class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold" data-i18n="allFeatures.title">📋 All Features</h3>
+                    <p class="text-slate-400 max-w-xl mx-auto" data-i18n="allFeatures.description">Complete technical specification of everything Voxi Book Player can do</p>
+                </div>
+
+                <!-- Mobile: Compact overview grid (visible only on mobile) -->
+                <div class="grid grid-cols-2 gap-3 mt-8 md:hidden" id="features-compact">
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">🎧</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.playback.title">Playback</h5>
+                        <span class="text-xs text-primary">8 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">🔊</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.background.title">Background Audio</h5>
+                        <span class="text-xs text-primary">6 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">⏰</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.timers.title">Timers</h5>
+                        <span class="text-xs text-primary">5 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">📚</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.library.title">Library</h5>
+                        <span class="text-xs text-primary">8 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">📊</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.statistics.title">Statistics</h5>
+                        <span class="text-xs text-primary">6 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">🎨</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.personalization.title">Personalization</h5>
+                        <span class="text-xs text-primary">5 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">♿</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.accessibility.title">Accessibility</h5>
+                        <span class="text-xs text-primary">5 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
+                        <div class="text-2xl mb-1">📱</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.interface.title">Interface</h5>
+                        <span class="text-xs text-primary">6 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center col-span-2">
+                        <div class="text-2xl mb-1">⚙️</div>
+                        <h5 class="text-sm font-medium" data-i18n="allFeatures.technical.title">Technical</h5>
+                        <span class="text-xs text-primary">7 <span data-i18n="allFeatures.items">features</span></span>
+                    </div>
+                </div>
+
+                <!-- Mobile: Show details button -->
+                <div class="text-center mt-4 md:hidden">
+                    <button onclick="toggleFeaturesDetail()" id="features-toggle-btn" class="inline-flex items-center px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-medium transition-colors">
+                        <span data-i18n="allFeatures.showDetails">Show all details</span>
+                        <i class="uil uil-angle-down ms-1 text-lg" id="features-toggle-icon"></i>
+                    </button>
+                    <p class="text-xs text-slate-400 mt-2"><span class="font-medium">56</span> <span data-i18n="allFeatures.totalFeatures">features total</span></p>
+                </div>
+
+                <!-- Full feature grid (hidden on mobile by default, always visible on tablet+) -->
+                <div class="hidden md:grid lg:grid-cols-3 md:grid-cols-2 mt-8 gap-6" id="features-full">
+                    <!-- Playback -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">🎧</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.playback.title">Playback</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item1">Play / Pause / Stop controls</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item2">Skip forward/back (15-90 sec configurable)</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item3">Next/Previous track navigation</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item4">Seek slider for any position</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item5">Speed: 1.0×-2.0× (0.1× steps)</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item6">Volume: 10%-100% (below system level)</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item7">Auto position save per file</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.playback.item8">Mini-player state restore (7 days)</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Background Playback -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">🔊</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.background.title">Background Audio</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item1">Playback with screen off</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item2">Lock Screen controls</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item3">Control Center integration</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item4">Dynamic Island / Now Playing</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item5">Smart interruption handling</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.background.item6">Auto-recovery after iOS audio reset</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Timers -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">⏰</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.timers.title">Timers</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.timers.item1">Sleep timer: 5-90 minutes</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.timers.item2">Remaining time display</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.timers.item3">Auto-pause on timer</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.timers.item4">Daily auto-shutdown (HH:MM)</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.timers.item5">Scheduled pause at exact time</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Library -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">📚</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.library.title">Library Management</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item1">Create books, import audio files</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item2">Formats: MP3, M4A, M4B, AAC, WAV, FLAC, OGG, OPUS</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item3">Edit metadata (title, author, narrator)</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item4">Custom covers from gallery/camera</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item5">Drag & drop reordering</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item6">Individual track covers & metadata</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item7">Favorites collection</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.library.item8">Archive with preserved stats</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Statistics -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">📊</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.statistics.title">Statistics</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item1">Toggle tracking on/off</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item2">Total listening time across all books</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item3">Per-book completion percentage</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item4">Per-file progress tracking</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item5">Time in hours/minutes/seconds</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.statistics.item6">Preserved on archive</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Personalization -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">🎨</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.personalization.title">Personalization</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.personalization.item1">Light / Dark / System theme</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.personalization.item2">7+ font choices + search</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.personalization.item3">Text scale 0.5×-2.0×</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.personalization.item4">Russian 🇷🇺 / English 🇺🇸 / System</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.personalization.item5">Portrait orientation lock</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Accessibility -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">♿</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.accessibility.title">Accessibility</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.accessibility.item1">Full VoiceOver support</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.accessibility.item2">Dynamic Type scaling</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.accessibility.item3">Accessibility labels on all elements</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.accessibility.item4">Accessibility hints for actions</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.accessibility.item5">44×44pt minimum touch targets</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Interface -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">📱</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.interface.title">Interface</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item1">iPhone optimized layout</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item2">iPad 2-column with sidebar</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item3">Landscape orientation support</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item4">Global mini-player on all screens</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item5">Waveform playback animation</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.interface.item6">Smooth transitions & spring animations</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical -->
+                    <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="size-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center text-xl me-3">⚙️</div>
+                            <h4 class="text-lg font-semibold" data-i18n="allFeatures.technical.title">Technical</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item1">Background audio & processing</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item2">Health check every 30 sec</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item3">Auto-recovery after failures</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item4">Retry logic & error logging</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item5">Lazy loading & LRU cache</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item6">Throttled UI updates</span></li>
+                            <li class="flex items-start"><i class="uil uil-check text-primary me-2 mt-0.5"></i><span data-i18n="allFeatures.technical.item7">Cloud sync (Beta)</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Planned Features -->
+                <div class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700">
+                    <div class="grid grid-cols-1 pb-8 text-center">
+                        <span class="bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-bold px-2.5 py-0.5 rounded h-5 inline-block mx-auto mb-3" data-i18n="plannedFeatures.label">🚀 Coming Soon</span>
+                        <h3 class="mb-4 md:text-2xl md:leading-normal text-xl leading-normal font-semibold" data-i18n="plannedFeatures.title">Planned Features</h3>
+                        <p class="text-slate-400 max-w-xl mx-auto text-sm" data-i18n="plannedFeatures.description">Features in active development or planned for future releases. Sorted by implementation complexity.</p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                        <!-- Easy -->
+                        <div class="bg-gradient-to-br from-green-50 to-white dark:from-green-900/20 dark:to-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6 border border-green-100 dark:border-green-800/30">
+                            <div class="flex items-center mb-4">
+                                <div class="size-10 bg-green-500/20 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center text-sm font-bold me-3">1</div>
+                                <div>
+                                    <h4 class="text-base font-semibold" data-i18n="plannedFeatures.easy.title">Quick Wins</h4>
+                                    <span class="text-xs text-green-600 dark:text-green-400" data-i18n="plannedFeatures.easy.label">Easy to implement</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-green-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.easy.item1.title">Pause at End of File</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.easy.item1.desc">Auto-stop after current track ends</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-green-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.easy.item2.title">Import/Export JSON</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.easy.item2.desc">Backup settings, playlists & progress</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-green-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.easy.item3.title">Series & Author Grouping</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.easy.item3.desc">Auto-organize books by metadata</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Medium -->
+                        <div class="bg-gradient-to-br from-amber-50 to-white dark:from-amber-900/20 dark:to-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6 border border-amber-100 dark:border-amber-800/30">
+                            <div class="flex items-center mb-4">
+                                <div class="size-10 bg-amber-500/20 text-amber-600 dark:text-amber-400 rounded-lg flex items-center justify-center text-sm font-bold me-3">2</div>
+                                <div>
+                                    <h4 class="text-base font-semibold" data-i18n="plannedFeatures.medium.title">Audio Processing</h4>
+                                    <span class="text-xs text-amber-600 dark:text-amber-400" data-i18n="plannedFeatures.medium.label">Medium complexity</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-amber-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.medium.item1.title">Silence Trimmer</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.medium.item1.desc">Auto-remove long pauses with configurable threshold</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-amber-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.medium.item2.title">Click & Pop Remover</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.medium.item2.desc">Intelligent noise suppression for vinyl digitizations</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-amber-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.medium.item3.title">CUE File Support</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.medium.item3.desc">Split single audio into chapters using CUE sheets</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-amber-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.medium.item4.title">Cloud Backup</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.medium.item4.desc">Auto-backup to Google Drive / iCloud</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Complex -->
+                        <div class="bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6 border border-purple-100 dark:border-purple-800/30">
+                            <div class="flex items-center mb-4">
+                                <div class="size-10 bg-purple-500/20 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center text-sm font-bold me-3">3</div>
+                                <div>
+                                    <h4 class="text-base font-semibold" data-i18n="plannedFeatures.complex.title">Major Features</h4>
+                                    <span class="text-xs text-purple-600 dark:text-purple-400" data-i18n="plannedFeatures.complex.label">Complex implementation</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-3 text-sm text-slate-500 dark:text-slate-400">
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-purple-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.complex.item1.title">Network Storage (NAS/SMB/UPnP)</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.complex.item1.desc">Stream from network folders without copying</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-purple-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.complex.item2.title">Cross-Device Sync</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.complex.item2.desc">Seamless progress sync between devices</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-purple-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.complex.item3.title">Local Web Server</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.complex.item3.desc">Manage library via browser on local network</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="uil uil-clock text-purple-500 me-2 mt-0.5"></i>
+                                    <div>
+                                        <span class="font-medium text-slate-700 dark:text-slate-300" data-i18n="plannedFeatures.complex.item4.title">Desktop App</span>
+                                        <p class="text-xs mt-0.5" data-i18n="plannedFeatures.complex.item4.desc">Windows, macOS & Linux with unified UI</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <p class="text-slate-400 text-sm" data-i18n="plannedFeatures.note">💬 Have a feature request? Submit it via in-app support!</p>
+                    </div>
+                </div>
+            </div><!--end all-features container-->
+
             <div id="download" class="container relative md:mt-24 mt-16 z-2">
                 <div class="grid md:grid-cols-12 grid-cols-1 items-center">
                     <div class="lg:col-span-5 md:col-span-6 mb-8 md:mb-0">
@@ -524,6 +930,7 @@
                                         <li><a href="#features" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.features">Features</span></a></li>
                                         <li class="mt-[10px]"><a href="#about" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.statistics">Statistics</span></a></li>
                                         <li class="mt-[10px]"><a href="#testimonials" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.whyVoxi">Why Voxi</span></a></li>
+                                        <li class="mt-[10px]"><a href="#all-features" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.allFeatures">All Features</span></a></li>
                                         <li class="mt-[10px]"><a href="#download" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.download">Download</span></a></li>
                                         <li class="mt-[10px]"><a href="#news" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.news">News</span></a></li>
                                     </ul>
@@ -601,6 +1008,43 @@
                 if (fullContent) {
                     fullContent.classList.toggle('hidden');
                 }
+            }
+
+            // Toggle features detail view (mobile only)
+            function toggleFeaturesDetail() {
+                const compactView = document.getElementById('features-compact');
+                const fullView = document.getElementById('features-full');
+                const toggleBtn = document.getElementById('features-toggle-btn');
+                const toggleIcon = document.getElementById('features-toggle-icon');
+                
+                if (fullView && compactView && toggleBtn) {
+                    const isExpanded = fullView.classList.contains('grid');
+                    
+                    if (isExpanded) {
+                        // Collapse
+                        fullView.classList.remove('grid');
+                        fullView.classList.add('hidden');
+                        compactView.classList.remove('hidden');
+                        toggleIcon.classList.remove('uil-angle-up');
+                        toggleIcon.classList.add('uil-angle-down');
+                        toggleBtn.querySelector('span').setAttribute('data-i18n', 'allFeatures.showDetails');
+                        toggleBtn.querySelector('span').textContent = getSavedLanguage() === 'ru' ? 'Показать подробности' : 'Show all details';
+                    } else {
+                        // Expand
+                        fullView.classList.remove('hidden');
+                        fullView.classList.add('grid');
+                        compactView.classList.add('hidden');
+                        toggleIcon.classList.remove('uil-angle-down');
+                        toggleIcon.classList.add('uil-angle-up');
+                        toggleBtn.querySelector('span').setAttribute('data-i18n', 'allFeatures.hideDetails');
+                        toggleBtn.querySelector('span').textContent = getSavedLanguage() === 'ru' ? 'Свернуть' : 'Hide details';
+                    }
+                }
+            }
+            
+            // Helper to get saved language
+            function getSavedLanguage() {
+                return localStorage.getItem('voxi_lang') || 'en';
             }
         </script>
         <!-- JAVASCRIPTS -->

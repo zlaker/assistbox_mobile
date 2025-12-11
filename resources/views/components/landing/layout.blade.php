@@ -1,4 +1,4 @@
-@props(['title' => 'Voxi Book Player', 'description' => 'Your personal audiobook library with powerful statistics.', 'keywords' => 'audiobook, player, statistics, ios, iphone, ipad', 'noindex' => false, 'landing' => false, 'page' => null])
+@props(['title' => 'Voxi Book Player', 'description' => 'Your personal audiobook library with powerful statistics.', 'keywords' => 'audiobook, player, statistics, ios, iphone, ipad', 'noindex' => false, 'landing' => false, 'page' => null, 'canonical' => null, 'ogImage' => null])
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="light scroll-smooth" dir="ltr">
@@ -8,11 +8,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta id="metaDescription" name="description" content="{{ $description }}">
         <meta id="metaKeywords" name="keywords" content="{{ $keywords }}">
-        <meta name="author" content="{{ config('app.name') }}">
+        <meta name="author" content="Voxi Book Player">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         @if($noindex)
         <meta name="robots" content="noindex,nofollow">
+        @else
+        <meta name="robots" content="index,follow">
         @endif
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href="{{ $canonical ?? url()->current() }}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ $canonical ?? url()->current() }}">
+        <meta property="og:title" content="{{ $title }}">
+        <meta property="og:description" content="{{ $description }}">
+        <meta property="og:image" content="{{ $ogImage ?? asset('landing/assets/images/app/basic_player_ios.png') }}">
+        <meta property="og:site_name" content="Voxi Book Player">
+        <meta property="og:locale" content="{{ app()->getLocale() }}">
+        <meta property="og:locale:alternate" content="en_US">
+        <meta property="og:locale:alternate" content="ru_RU">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $title }}">
+        <meta name="twitter:description" content="{{ $description }}">
+        <meta name="twitter:image" content="{{ $ogImage ?? asset('landing/assets/images/app/basic_player_ios.png') }}">
+
+        <!-- App Store Smart Banner -->
+        <meta name="apple-itunes-app" content="app-id=6756003204">
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#4a6fa5">
+        <meta name="msapplication-TileColor" content="#4a6fa5">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
