@@ -464,8 +464,8 @@
                     <p class="text-slate-400 max-w-xl mx-auto" data-i18n="allFeatures.description">Complete technical specification of everything Voxi Book Player can do</p>
                 </div>
 
-                <!-- Mobile: Compact overview grid (visible only on mobile) -->
-                <div class="grid grid-cols-2 gap-3 mt-8 md:hidden" id="features-compact">
+                <!-- Mobile: Compact overview grid (hidden - using full grid for all screens) -->
+                <div class="hidden" id="features-compact">
                     <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-4 text-center">
                         <div class="text-2xl mb-1">🎧</div>
                         <h5 class="text-sm font-medium" data-i18n="allFeatures.playback.title">Playback</h5>
@@ -513,8 +513,8 @@
                     </div>
                 </div>
 
-                <!-- Mobile: Show details button -->
-                <div class="text-center mt-4 md:hidden">
+                <!-- Mobile: Show details button (hidden - using full grid for all screens) -->
+                <div class="hidden">
                     <button onclick="toggleFeaturesDetail()" id="features-toggle-btn" class="inline-flex items-center px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-medium transition-colors">
                         <span data-i18n="allFeatures.showDetails">Show all details</span>
                         <i class="uil uil-angle-down ms-1 text-lg" id="features-toggle-icon"></i>
@@ -522,8 +522,8 @@
                     <p class="text-xs text-slate-400 mt-2"><span class="font-medium">56</span> <span data-i18n="allFeatures.totalFeatures">features total</span></p>
                 </div>
 
-                <!-- Full feature grid (hidden on mobile by default, always visible on tablet+) -->
-                <div class="hidden md:grid lg:grid-cols-3 md:grid-cols-2 mt-8 gap-6" id="features-full">
+                <!-- Full feature grid (always visible on tablet+) -->
+                <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-8 gap-6" id="features-full">
                     <!-- Playback -->
                     <div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm dark:shadow-gray-800 p-6">
                         <div class="flex items-center mb-4">
