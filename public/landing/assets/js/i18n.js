@@ -216,7 +216,7 @@ const translations = {
             intro: 'We\'re excited to introduce you to our new project.',
             story: 'Voxi Book Player was born from a personal need. When I switched from Android to Apple, I found myself missing certain audiobook features that I had grown to love. Instead of compromising, I decided to build the player I always wanted.',
             humble: 'Please be kind — this is a passion project still in its early stages. I\'m actively developing and improving it every day. Even having just one user who finds this app useful would make all the effort worthwhile.',
-            participate: 'You can be part of this journey! If there\'s a feature you\'re missing or something that would make your listening experience better, let me know — I\'ll do my best to make it happen.',
+            participate: 'You can be part of this journey! If there\'s a feature you\'re missing or something that would make your listening experience better, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-white underline hover:text-white/80">let me know</a> — I\'ll do my best to make it happen.',
             thanks: 'Thank you for stopping by. I hope Voxi becomes a trusted companion for your audiobook adventures.',
             signature: '— The Developer'
         },
@@ -746,13 +746,13 @@ const translations = {
         welcome: {
             label: '👋 Привет',
             title: 'Добро пожаловать в Voxi Book Player',
-            greeting: 'Здравствуй, дорогой посетитель!',
-            intro: 'Рады представить тебе наш новый проект.',
-            story: 'Voxi Book Player появился из личной потребности. При переходе с Android на Apple мне не хватало некоторых функций для аудиокниг, к которым я привык. Вместо того чтобы мириться с этим, я решил создать плеер, о котором всегда мечтал.',
-            humble: 'Прошу не судить строго — это проект души, который ещё на этапе становления. Я активно развиваю и улучшаю его каждый день. Даже если хотя бы один пользователь найдёт это приложение полезным — все усилия будут оправданы.',
-            participate: 'Ты можешь стать частью этого пути! Если тебе не хватает какой-то функции или есть идея, как сделать прослушивание лучше — напиши мне, и я обязательно постараюсь это реализовать.',
-            thanks: 'Спасибо, что заглянул. Надеюсь, Voxi станет твоим верным спутником в мире аудиокниг.',
-            signature: '— Разработчик'
+            greeting: 'Привет! 👋',
+            intro: 'Представляем Voxi Book Player — наш новый плеер для аудиокниг.',
+            story: 'Всё началось с моего перехода с Android на iPhone. Мне не хватало удобного плеера с привычными функциями. Вместо того чтобы искать дальше, я решил создать такой, каким хотел бы пользоваться сам.',
+            humble: 'Я вкладываю в него душу и постоянно работаю над улучшениями. Для меня большая радость, если приложение поможет и вам.',
+            participate: 'Ваше мнение очень важно! Если вам чего-то не хватает или есть идеи для улучшения — пожалуйста, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-white underline hover:text-white/80">напишите мне</a>. Я с радостью всё изучу и постараюсь воплотить.',
+            thanks: 'Спасибо, что заглянули. Надеюсь, Voxi станет вашим отличным спутником в мире книг.',
+            signature: '— Разработчик Voxi'
         },
 
         // Features Section
