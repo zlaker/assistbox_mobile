@@ -1023,7 +1023,7 @@
         <script src="{{ asset('landing/assets/libs/feather-icons/feather.min.js') }}"></script>
         <script src="{{ asset('landing/assets/js/plugins.init.js') }}"></script>
         <script src="{{ asset('landing/assets/js/app.js') }}"></script>
-        <script src="{{ asset('landing/assets/js/i18n.js') }}"></script>
+        <script src="{{ asset('landing/assets/js/i18n.js') . '?v=' . time() }}"></script>
         <script>
             // Toggle news article content
             function toggleNews(id) {
