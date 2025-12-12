@@ -163,16 +163,38 @@
                     <ul class="navigation-menu nav-light">
                         <li><a href="{{ route('home') }}" class="sub-menu-item" data-i18n="nav.home">Home</a></li>
                         <li><a href="#features" class="sub-menu-item" data-i18n="nav.features">Features</a></li>
-                        <li><a href="#about" class="sub-menu-item" data-i18n="nav.statistics">Statistics</a></li>
                         <li><a href="#testimonials" class="sub-menu-item" data-i18n="nav.whyVoxi">Why Voxi</a></li>
                         <li><a href="#download" class="sub-menu-item" data-i18n="nav.download">Download</a></li>
-                        <li><a href="#news" class="sub-menu-item" data-i18n="nav.news">News</a></li>
                         <li><a href="{{ route('ios.support') }}" class="sub-menu-item" data-i18n="nav.support">Support</a></li>
                     </ul><!--end navigation menu-->
                 </div><!--end navigation-->
             </div><!--end container-->
         </nav><!--end header-->
         <!-- End Navbar -->
+
+        <!-- Start Welcome Section -->
+        <section id="welcome" class="relative pt-28 pb-12 md:pt-32 md:pb-16 bg-primary">
+            <div class="container relative">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 text-left space-y-4 border border-white/20">
+                        <p class="text-xl text-white font-medium" data-i18n="welcome.greeting">Hello, dear visitor!</p>
+                        
+                        <p class="text-white/80" data-i18n="welcome.intro">We're excited to introduce you to our new project.</p>
+                        
+                        <p class="text-white/80" data-i18n="welcome.story">Voxi Book Player was born from a personal need. When I switched from Android to Apple, I found myself missing certain audiobook features that I had grown to love. Instead of compromising, I decided to build the player I always wanted.</p>
+                        
+                        <p class="text-white/80" data-i18n="welcome.humble">Please be kind — this is a passion project still in its early stages. I'm actively developing and improving it every day. Even having just one user who finds this app useful would make all the effort worthwhile.</p>
+                        
+                        <p class="text-white/80" data-i18n="welcome.participate">You can be part of this journey! If there's a feature you're missing or something that would make your listening experience better, let me know — I'll do my best to make it happen.</p>
+                        
+                        <p class="text-white/80" data-i18n="welcome.thanks">Thank you for stopping by. I hope Voxi becomes a trusted companion for your audiobook adventures.</p>
+                        
+                        <p class="text-white font-medium text-right italic pt-2" data-i18n="welcome.signature">— The Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Welcome Section -->
 
         <!-- Start Hero -->
         <section class="relative table w-full py-36 md:py-56 md:pb-0 overflow-hidden bg-[url('/landing/assets/images/app/bg.png')] bg-top bg-no-repeat bg-fixed bg-cover">
