@@ -23,14 +23,23 @@ class SupportController extends Controller
             abort(Response::HTTP_FORBIDDEN);
         }
 
+        // Поддерживаем оба формата:
+        // 1. Старый: title + question
+        // 2. Новый iOS: message + deviceId
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'question' => ['required', 'string'],
+            'message' => ['required_without:question', 'string'],
+            'title' => ['nullable', 'string', 'max:255'],
+            'question' => ['nullable', 'string'],
+            'deviceId' => ['nullable', 'string'], // iOS отправляет deviceId явно
         ]);
 
+        // Если пришёл message (новый формат iOS), используем его как question
+        $message = $validated['message'] ?? $validated['question'];
+        $title = $validated['title'] ?? 'Support Request';
+
         $ticket = $this->repo->create([
-            'title' => $validated['title'],
-            'question' => $validated['question'],
+            'title' => $title,
+            'question' => $message,
             'user_id' => $user->id,
             'device_id' => (string) $user->device_id,
             'status' => 'new',
@@ -40,7 +49,7 @@ class SupportController extends Controller
     }
 
     // GET /ios/support/tickets
-    public function tickets(Request $request): AnonymousResourceCollection
+    public function tickets(Request $request): array
     {
         $user = $request->attributes->get('custom_user');
         if (!$user) {
@@ -48,6 +57,10 @@ class SupportController extends Controller
         }
 
         $tickets = $this->repo->listByDeviceId((string) $user->device_id);
-        return SupportTicketResource::collection($tickets);
+        
+        // iOS ожидает структуру { tickets: [...] }
+        return [
+            'tickets' => SupportTicketResource::collection($tickets)->resolve()
+        ];
     }
 }

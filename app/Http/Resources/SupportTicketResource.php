@@ -15,15 +15,20 @@ class SupportTicketResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
+        // Определяем статус для iOS
+        // new/in_progress -> "pending", closed -> "answered"
+        $iosStatus = in_array($this->status, ['new', 'in_progress']) ? 'pending' : 'answered';
+        
         return [
-            'id' => $this->id,
+            'id' => (string) $this->id, // iOS ожидает строку
+            'message' => $this->question, // iOS использует 'message' вместо 'question'
+            'response' => $this->answer, // iOS использует 'response' вместо 'answer'
+            'status' => $iosStatus,
+            'createdAt' => $this->created_at?->format('Y-m-d\TH:i:s.v\Z'), // ISO8601 с миллисекундами
+            
+            // Дополнительные поля для совместимости с админ-панелью
             'title' => $this->title,
-            'question' => $this->question,
-            'status' => $this->status,
-            'answer' => $this->answer,
             'device_id' => $this->device_id,
-            'created_at' => $this->created_at?->toISOString(),
-            'updated_at' => $this->updated_at?->toISOString(),
         ];
     }
 }
