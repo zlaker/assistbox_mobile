@@ -17,10 +17,12 @@ class SupportTicket extends Model
         'device_id',
         'status',
         'answer',
+        'read_at',
     ];
 
     protected $casts = [
         'user_id' => 'integer',
+        'read_at' => 'datetime',
     ];
 
     public function user(): BelongsTo

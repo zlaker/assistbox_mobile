@@ -38,4 +38,30 @@ class SupportTicketRepository
         $ticket->save();
         return $ticket;
     }
+
+    public function findByIdAndDeviceId(int $id, string $deviceId): ?SupportTicket
+    {
+        return SupportTicket::query()
+            ->where('id', $id)
+            ->where('device_id', $deviceId)
+            ->first();
+    }
+
+    public function markAsRead(SupportTicket $ticket): SupportTicket
+    {
+        if ($ticket->read_at === null) {
+            $ticket->read_at = now();
+            $ticket->save();
+        }
+        return $ticket;
+    }
+
+    public function countUnreadByDeviceId(string $deviceId): int
+    {
+        return SupportTicket::query()
+            ->where('device_id', $deviceId)
+            ->whereNotNull('answer') // Только тикеты с ответом
+            ->whereNull('read_at')    // Непрочитанные
+            ->count();
+    }
 }

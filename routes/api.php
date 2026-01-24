@@ -24,3 +24,4 @@ Route::post('news/read/{article_id}', [NewsReadController::class, 'store']);
 // iOS Support endpoints
 Route::post('ios/support', [SupportController::class, 'store']);
 Route::get('ios/support/tickets', [SupportController::class, 'tickets']);
+Route::post('ios/support/read/{id}', [SupportController::class, 'markAsRead']);

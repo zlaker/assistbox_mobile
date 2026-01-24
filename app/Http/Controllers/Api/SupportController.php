@@ -63,4 +63,23 @@ class SupportController extends Controller
             'tickets' => SupportTicketResource::collection($tickets)->resolve()
         ];
     }
+
+    // POST /ios/support/read/{id}
+    public function markAsRead(Request $request, int $id): SupportTicketResource
+    {
+        $user = $request->attributes->get('custom_user');
+        if (!$user) {
+            abort(Response::HTTP_FORBIDDEN);
+        }
+
+        $ticket = $this->repo->findByIdAndDeviceId($id, (string) $user->device_id);
+        
+        if (!$ticket) {
+            abort(Response::HTTP_NOT_FOUND);
+        }
+
+        $this->repo->markAsRead($ticket);
+
+        return new SupportTicketResource($ticket);
+    }
 }
