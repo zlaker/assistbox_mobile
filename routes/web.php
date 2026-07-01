@@ -8,6 +8,10 @@ use App\Http\Controllers\LandingController;
 
 Route::get('/', [LandingController::class, 'index'])->name('home');
 
+// Deep links opened from the iOS app (Profile → Privacy / Terms)
+Route::get('/privacy', fn () => redirect()->route('ios.privacy'));
+Route::get('/terms', fn () => redirect()->route('ios.terms'));
+
 Route::get('dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

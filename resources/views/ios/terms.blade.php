@@ -10,7 +10,7 @@
         <div class="container relative">
             <div class="grid grid-cols-1 text-center mt-10">
                 <h1 class="text-3xl leading-normal font-semibold text-white" data-i18n-heading data-i18n="termsPage.heading">Terms of Use</h1>
-                <p class="text-slate-400 mt-2" data-i18n-subtitle data-i18n="termsPage.updated">Last Updated: December 3, 2025</p>
+                <p class="text-slate-400 mt-2" data-i18n-subtitle data-i18n="termsPage.updated">Last Updated: July 1, 2026</p>
             </div>
         </div>
     </section>

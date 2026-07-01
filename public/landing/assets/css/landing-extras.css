@@ -1,0 +1,108 @@
+/* Voxi Book Player — landing page extras */
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.article-prose {
+    font-size: 0.875rem;
+    line-height: 1.625;
+    color: rgb(148 163 184);
+}
+
+.article-prose h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(51 65 85);
+}
+
+.dark .article-prose h3 {
+    color: rgb(226 232 240);
+}
+
+.article-prose p {
+    margin-bottom: 0.75rem;
+}
+
+.article-prose ul {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+    list-style-type: disc;
+}
+
+.article-prose li {
+    margin-bottom: 0.35rem;
+}
+
+.article-prose strong {
+    font-weight: 600;
+    color: rgb(71 85 105);
+}
+
+.dark .article-prose strong {
+    color: rgb(203 213 225);
+}
+
+.article-prose hr {
+    margin: 1.25rem 0;
+    border: 0;
+    border-top: 1px solid rgb(226 232 240);
+}
+
+.dark .article-prose hr {
+    border-top-color: rgb(51 65 85);
+}
+
+.article-prose code {
+    font-size: 0.8125rem;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    background: rgb(241 245 249);
+}
+
+.dark .article-prose code {
+    background: rgb(30 41 59);
+}
+
+/* Feature cards — consistent hover for app-landing feel */
+#features-full > div {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#features-full > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.08);
+}
+
+.dark #features-full > div:hover {
+    box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.35);
+}
+
+/* News card expand */
+.news-card[aria-expanded="true"] .news-excerpt {
+    display: none;
+}
+
+.news-card[aria-expanded="true"] .news-read-more {
+    display: none;
+}
+
+/* Landing page: room for sticky mobile CTA */
+.landing-page {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+    .landing-page {
+        padding-bottom: 0;
+    }
+}
+
+#mobile-download-cta a:active {
+    transform: scale(0.98);
+}

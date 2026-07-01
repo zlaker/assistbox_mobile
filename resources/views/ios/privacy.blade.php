@@ -10,7 +10,7 @@
         <div class="container relative">
             <div class="grid grid-cols-1 text-center mt-10">
                 <h1 class="text-3xl leading-normal font-semibold text-white" data-i18n-heading data-i18n="privacyPage.heading">Privacy Policy</h1>
-                <p class="text-slate-400 mt-2" data-i18n-subtitle data-i18n="privacyPage.updated">Last Updated: December 3, 2025</p>
+                <p class="text-slate-400 mt-2" data-i18n-subtitle data-i18n="privacyPage.updated">Last Updated: July 1, 2026</p>
             </div>
         </div>
     </section>
@@ -56,8 +56,10 @@
 
                         <h2 class="text-xl font-semibold mb-4" data-i18n="privacyPage.section3.title">3. Data Storage and Security</h2>
                         <ul class="list-disc list-inside text-slate-400 mb-4 space-y-2">
-                            <li data-i18n="privacyPage.section3.item1"><strong>Local Storage:</strong> Your listening history and settings (collected with consent) are stored locally on your device. We do not upload, transmit, or store this data on our servers.</li>
-                            <li data-i18n="privacyPage.section3.item2"><strong>Device Identifier:</strong> The anonymized device identifier for notifications is processed by our secure push notification service provider (Apple Push Notification service for iOS) and is not used for any other purpose.</li>
+                            <li data-i18n="privacyPage.section3.item1"><strong>Local Storage:</strong> Your library, listening history, and settings are stored locally on your device. Audiobook files and listening data are not uploaded to Voxi servers.</li>
+                            <li data-i18n="privacyPage.section3.item2"><strong>iCloud (Optional):</strong> If iCloud is enabled in the app and you are signed in on your device, playback progress, settings, and statistics sync via Apple iCloud Key-Value Store. Audiobooks may use iCloud Drive. This is handled by Apple under your Apple ID, not on Voxi servers.</li>
+                            <li data-i18n="privacyPage.section3.item3"><strong>Support & News:</strong> An anonymous device identifier is sent when you use in-app support or fetch news. It associates support tickets and unread articles with your device. No audiobook content is transmitted.</li>
+                            <li data-i18n="privacyPage.section3.item4"><strong>Device Identifier:</strong> Processed by Apple Push Notification service for delivering notifications. Not used for other purposes.</li>
                         </ul>
                         <p class="text-slate-400 mb-6" data-i18n="privacyPage.section3.note">We implement commercially acceptable security measures to protect the minimal information we handle. However, no method of electronic transmission or storage is 100% secure.</p>
 

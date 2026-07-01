@@ -164,10 +164,7 @@ function windowScroll() {
     }
 }
 
-window.addEventListener('scroll', (ev) => {
-    ev.preventDefault();
-    windowScroll();
-})
+window.addEventListener('scroll', windowScroll);
 /*********************/
 /*    Back To TOp    */
 /*********************/
@@ -300,23 +297,38 @@ try {
 /* Dark & Light Mode */
 /*********************/
 try {
-    function changeTheme(e){
-        e.preventDefault()
-        const htmlTag = document.getElementsByTagName("html")[0]
-        
-        if (htmlTag.className.includes("dark")) {
-            htmlTag.className = 'light'
-        } else {
-            htmlTag.className = 'dark'
+    const THEME_KEY = 'voxi_theme';
+    const htmlTag = document.documentElement;
+    const chk = document.getElementById('chk');
+
+    function applyTheme(theme) {
+        htmlTag.className = theme;
+        if (chk) {
+            chk.checked = theme === 'dark';
         }
     }
 
-    const switcher = document.getElementById("theme-mode")
-    switcher?.addEventListener("click" ,changeTheme )
-    
-    const chk = document.getElementById('chk');
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme === 'dark' || savedTheme === 'light') {
+        applyTheme(savedTheme);
+    }
 
-    chk.addEventListener('change',changeTheme);
+    function changeTheme(e) {
+        if (e) {
+            e.preventDefault();
+        }
+
+        const nextTheme = htmlTag.className.includes('dark') ? 'light' : 'dark';
+        applyTheme(nextTheme);
+        localStorage.setItem(THEME_KEY, nextTheme);
+    }
+
+    const switcher = document.getElementById('theme-mode');
+    switcher?.addEventListener('click', changeTheme);
+
+    if (chk) {
+        chk.addEventListener('change', changeTheme);
+    }
 } catch (err) {
     
 }
