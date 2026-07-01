@@ -44,7 +44,7 @@
         <div class="menu-extras">
             <div class="menu-item">
                 <!-- Mobile menu toggle-->
-                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()" href="javascript:void(0)" role="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation">
                     <div class="lines">
                         <span></span>
                         <span></span>
@@ -58,7 +58,7 @@
         <!--Language & Download buttons Start-->
         <ul class="buy-button list-none mb-0 mt-5 flex items-center">
             <li class="inline ps-1 mb-0">
-                <button id="langSwitcher" class="relative group" title="Switch language">
+                <button type="button" id="langSwitcher" class="relative group" aria-label="Switch language">
                     @if($landing)
                     <!-- Shown when scrolled (white bg) - colored button -->
                     <div class="login-btn-primary"><span class="size-9 inline-flex items-center justify-center tracking-wide border-2 border-primary/50 align-middle duration-500 text-base text-center rounded-full bg-primary/10 hover:bg-primary/20 hover:border-primary text-primary font-bold text-xs"><span id="currentLang">EN</span></span></div>
@@ -71,7 +71,7 @@
                 </button>
             </li>
             <li class="inline ps-1 mb-0">
-                <a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank">
+                <a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
                     @if($landing)
                     <div class="login-btn-primary"><span class="size-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full bg-primary hover:bg-primary-700 border border-primary hover:border-primary-700 text-white"><i data-feather="download" class="size-4"></i></span></div>
                     <div class="login-btn-light"><span class="size-9 inline-flex items-center justify-center tracking-wide border border-gray-50 align-middle duration-500 text-base text-center rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-800 dark:hover:border-gray-700"><i data-feather="download" class="size-4"></i></span></div>
@@ -87,11 +87,12 @@
             <!-- Navigation Menu-->   
             <ul class="navigation-menu {{ $landing ? 'nav-light' : '' }}">
                 <li><a href="{{ route('home') }}" class="sub-menu-item" data-i18n="nav.home">Home</a></li>
-                <li><a href="{{ route('home') }}#features" class="sub-menu-item" data-i18n="nav.features">Features</a></li>
-                <li><a href="{{ route('home') }}#about" class="sub-menu-item" data-i18n="nav.statistics">Statistics</a></li>
-                <li><a href="{{ route('home') }}#testimonials" class="sub-menu-item" data-i18n="nav.whyVoxi">Why Voxi</a></li>
-                <li><a href="{{ route('home') }}#download" class="sub-menu-item" data-i18n="nav.download">Download</a></li>
-                <li><a href="{{ route('home') }}#news" class="sub-menu-item" data-i18n="nav.news">News</a></li>
+                <li><a href="{{ $landing ? '#features' : route('home') . '#features' }}" class="sub-menu-item" data-i18n="nav.features">Features</a></li>
+                <li><a href="{{ $landing ? '#about' : route('home') . '#about' }}" class="sub-menu-item" data-i18n="nav.statistics">Statistics</a></li>
+                <li><a href="{{ $landing ? '#testimonials' : route('home') . '#testimonials' }}" class="sub-menu-item" data-i18n="nav.whyVoxi">Why Voxi</a></li>
+                <li><a href="{{ $landing ? '#all-features' : route('home') . '#all-features' }}" class="sub-menu-item" data-i18n="nav.allFeatures">All Features</a></li>
+                <li><a href="{{ $landing ? '#download' : route('home') . '#download' }}" class="sub-menu-item" data-i18n="nav.download">Download</a></li>
+                <li><a href="{{ $landing ? '#news' : route('home') . '#news' }}" class="sub-menu-item" data-i18n="nav.news">News</a></li>
                 <li><a href="{{ route('ios.support') }}" class="sub-menu-item" data-i18n="nav.support">Support</a></li>
             </ul><!--end navigation menu-->
         </div><!--end navigation-->

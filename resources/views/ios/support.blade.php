@@ -38,12 +38,12 @@
                         <div class="space-y-6">
                             <div>
                                 <p class="font-medium text-slate-700 dark:text-slate-300 mb-2" data-i18n="supportPage.faq.q1.question">Q: How do I add my audiobooks to the app?</p>
-                                <p class="text-slate-400" data-i18n="supportPage.faq.q1.answer">A: Voxi Book Player works with your existing audio files. You can add books via iTunes File Sharing (iOS), direct file import from cloud services (Dropbox, Google Drive), or simply by placing files in the "VoxiBooks" folder on your device.</p>
+                                <p class="text-slate-400" data-i18n="supportPage.faq.q1.answer">A: Tap "+" in the library to import from the Files app or iCloud Drive. You can also use Wi‑Fi Transfer (upload from a browser on your local network), OPDS catalogs, or drag files from other apps. Supported formats include MP3, M4A, M4B, FLAC, WAV, AAC, OGG, and more.</p>
                             </div>
                             
                             <div>
                                 <p class="font-medium text-slate-700 dark:text-slate-300 mb-2" data-i18n="supportPage.faq.q2.question">Q: Does the app sync my progress between devices?</p>
-                                <p class="text-slate-400" data-i18n="supportPage.faq.q2.answer">A: Currently, listening progress and settings are stored locally on your device. If you have opted-in within the app's settings, this data is saved in a local archive. Cloud sync between different devices is not yet available.</p>
+                                <p class="text-slate-400" data-i18n="supportPage.faq.q2.answer">A: Yes — when you are signed into the same Apple ID and enable iCloud sync in Settings, Voxi syncs playback progress, app settings, and listening statistics via iCloud Key-Value Store. Audiobook files can be stored in iCloud Drive with on-demand download. Full library backup or Android/desktop sync is not available yet.</p>
                             </div>
                             
                             <div>
@@ -67,15 +67,15 @@
                         <ul class="space-y-4 text-slate-400">
                             <li class="flex">
                                 <i class="uil uil-check-circle text-primary me-2 mt-1"></i>
-                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item1.title">Importing Books:</strong> <span data-i18n="supportPage.quickStart.item1.desc">Use the '+' button in the 'My Library' section to import files from your device or cloud storage.</span></span>
+                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item1.title">Importing Books:</strong> <span data-i18n="supportPage.quickStart.item1.desc">Use "+" in the library, Wi‑Fi Transfer, OPDS catalogs, or import from Files / iCloud Drive.</span></span>
                             </li>
                             <li class="flex">
                                 <i class="uil uil-check-circle text-primary me-2 mt-1"></i>
-                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item2.title">Managing Playback:</strong> <span data-i18n="supportPage.quickStart.item2.desc">Use the player screen to control speed, set a sleep timer, or bookmark a moment.</span></span>
+                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item2.title">Managing Playback:</strong> <span data-i18n="supportPage.quickStart.item2.desc">Adjust speed (0.5×–2.0×), set a sleep timer, add bookmarks, or jump to CUE/M4B chapters.</span></span>
                             </li>
                             <li class="flex">
                                 <i class="uil uil-check-circle text-primary me-2 mt-1"></i>
-                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item3.title">Organizing:</strong> <span data-i18n="supportPage.quickStart.item3.desc">Create custom playlists or use filters to sort your library by author, progress, or duration.</span></span>
+                                <span><strong class="text-slate-700 dark:text-slate-300" data-i18n="supportPage.quickStart.item3.title">Organizing:</strong> <span data-i18n="supportPage.quickStart.item3.desc">Use collections, series, sort and progress filters, and the Continue Listening widget on your Home Screen.</span></span>
                             </li>
                         </ul>
                     </div>
@@ -140,7 +140,7 @@
                 "name": "How do I add my audiobooks to the app?",
                 "acceptedAnswer": {
                     "@@type": "Answer",
-                    "text": "Voxi Book Player works with your existing audio files. You can add books via iTunes File Sharing (iOS), direct file import from cloud services (Dropbox, Google Drive), or simply by placing files in the VoxiBooks folder on your device."
+                    "text": "Tap \"+\" in the library to import from the Files app or iCloud Drive. You can also use Wi‑Fi Transfer (upload from a browser on your local network), OPDS catalogs, or drag files from other apps. Supported formats include MP3, M4A, M4B, FLAC, WAV, AAC, OGG, and more."
                 }
             },
             {
@@ -148,7 +148,7 @@
                 "name": "Does the app sync my progress between devices?",
                 "acceptedAnswer": {
                     "@@type": "Answer",
-                    "text": "Currently, listening progress and settings are stored locally on your device. If you have opted-in within the app's settings, this data is saved in a local archive. Cloud sync between different devices is not yet available."
+                    "text": "Yes — when you are signed into the same Apple ID and enable iCloud sync in Settings, Voxi syncs playback progress, app settings, and listening statistics via iCloud Key-Value Store. Audiobook files can be stored in iCloud Drive with on-demand download. Full library backup or Android/desktop sync is not available yet."
                 }
             },
             {

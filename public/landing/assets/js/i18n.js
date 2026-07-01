@@ -18,13 +18,13 @@ const translations = {
                 title: 'Terms of Use — Voxi Book Player',
                 description: 'Terms of Use for Voxi Book Player application',
                 heading: 'Terms of Use',
-                updated: 'Last Updated: December 3, 2025'
+                updated: 'Last Updated: July 1, 2026'
             },
             privacy: {
                 title: 'Privacy Policy — Voxi Book Player',
                 description: 'Privacy Policy for Voxi Book Player application',
                 heading: 'Privacy Policy',
-                updated: 'Last Updated: December 3, 2025'
+                updated: 'Last Updated: July 1, 2026'
             },
             support: {
                 title: 'Support & Help Center — Voxi Book Player',
@@ -32,6 +32,18 @@ const translations = {
                 heading: 'Support & Help Center',
                 subtitle: 'Having trouble or have a question? We\'re here to help!'
             }
+        },
+
+        a11y: {
+            switchToRussian: 'Switch to Russian',
+            switchToEnglish: 'Switch to English',
+            toggleMenu: 'Toggle navigation menu',
+            toggleDarkMode: 'Toggle dark mode',
+            appStoreDownload: 'Download on the App Store'
+        },
+
+        stickyCta: {
+            download: 'Download on the App Store'
         },
 
         // Support Page
@@ -42,11 +54,11 @@ const translations = {
                 title: 'Frequently Asked Questions (FAQ)',
                 q1: {
                     question: 'Q: How do I add my audiobooks to the app?',
-                    answer: 'A: Voxi Book Player works with your existing audio files. You can add books via iTunes File Sharing (iOS), direct file import from cloud services (Dropbox, Google Drive), or simply by placing files in the "VoxiBooks" folder on your device.'
+                    answer: 'A: Tap "+" in the library to import from the Files app or iCloud Drive. You can also use Wi‑Fi Transfer (upload from a browser on your local network), OPDS catalogs, or drag files from other apps. Supported formats include MP3, M4A, M4B, FLAC, WAV, AAC, OGG, and more.'
                 },
                 q2: {
                     question: 'Q: Does the app sync my progress between devices?',
-                    answer: 'A: Currently, listening progress and settings are stored locally on your device. If you have opted-in within the app\'s settings, this data is saved in a local archive. Cloud sync between different devices is not yet available.'
+                    answer: 'A: Yes — when you are signed into the same Apple ID and enable iCloud sync in Settings, Voxi syncs playback progress, app settings, and listening statistics via iCloud Key-Value Store. Audiobook files can be stored in iCloud Drive with on-demand download. Full library backup or Android/desktop sync is not available yet.'
                 },
                 q3: {
                     question: 'Q: I enabled notifications but don\'t receive updates. Why?',
@@ -61,15 +73,15 @@ const translations = {
                 title: 'Quick Start Guide',
                 item1: {
                     title: 'Importing Books:',
-                    desc: 'Use the \'+\' button in the \'My Library\' section to import files from your device or cloud storage.'
+                    desc: 'Use "+" in the library, Wi‑Fi Transfer, OPDS catalogs, or import from Files / iCloud Drive.'
                 },
                 item2: {
                     title: 'Managing Playback:',
-                    desc: 'Use the player screen to control speed, set a sleep timer, or bookmark a moment.'
+                    desc: 'Adjust speed (0.5×–2.0×), set a sleep timer, add bookmarks, or jump to CUE/M4B chapters.'
                 },
                 item3: {
                     title: 'Organizing:',
-                    desc: 'Create custom playlists or use filters to sort your library by author, progress, or duration.'
+                    desc: 'Use collections, series, sort and progress filters, and the Continue Listening widget on your Home Screen.'
                 }
             },
             contact: {
@@ -91,7 +103,7 @@ const translations = {
         // Privacy Page
         privacyPage: {
             heading: 'Privacy Policy',
-            updated: 'Last Updated: December 3, 2025',
+            updated: 'Last Updated: July 1, 2026',
             intro: 'This Privacy Policy explains how the Voxi Book Player application collects, uses, and protects information. By using the Application, you agree to the practices described below.',
             related: 'Related:',
             section1: {
@@ -116,8 +128,10 @@ const translations = {
             },
             section3: {
                 title: '3. Data Storage and Security',
-                item1: '<strong>Local Storage:</strong> Your listening history and settings (collected with consent) are stored locally on your device. We do not upload, transmit, or store this data on our servers.',
-                item2: '<strong>Device Identifier:</strong> The anonymized device identifier for notifications is processed by our secure push notification service provider (Apple Push Notification service for iOS) and is not used for any other purpose.',
+                item1: '<strong>Local Storage:</strong> Your library, listening history, and settings are stored locally on your device. Audiobook files and listening data are not uploaded to Voxi servers.',
+                item2: '<strong>iCloud (Optional):</strong> If iCloud is enabled in the app and you are signed in on your device, playback progress, settings, and statistics sync via Apple iCloud Key-Value Store. Audiobooks may use iCloud Drive. This is handled by Apple under your Apple ID, not on Voxi servers.',
+                item3: '<strong>Support & News:</strong> An anonymous device identifier is sent when you use in-app support or fetch news. It associates support tickets and unread articles with your device. No audiobook content is transmitted.',
+                item4: '<strong>Device Identifier:</strong> Processed by Apple Push Notification service for delivering notifications. Not used for other purposes.',
                 note: 'We implement commercially acceptable security measures to protect the minimal information we handle. However, no method of electronic transmission or storage is 100% secure.'
             },
             section4: {
@@ -148,7 +162,7 @@ const translations = {
         // Terms Page
         termsPage: {
             heading: 'Terms of Use',
-            updated: 'Last Updated: December 3, 2025',
+            updated: 'Last Updated: July 1, 2026',
             related: 'Related:',
             section1: {
                 title: '1. Acceptance',
@@ -216,7 +230,7 @@ const translations = {
             intro: 'We\'re excited to introduce you to our new project.',
             story: 'Voxi Book Player was born from a personal need. When I switched from Android to Apple, I found myself missing certain audiobook features that I had grown to love. Instead of compromising, I decided to build the player I always wanted.',
             humble: 'Please be kind — this is a passion project still in its early stages. I\'m actively developing and improving it every day. Even having just one user who finds this app useful would make all the effort worthwhile.',
-            participate: 'You can be part of this journey! If there\'s a feature you\'re missing or something that would make your listening experience better, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-white underline hover:text-white/80">let me know</a> — I\'ll do my best to make it happen.',
+            participate: 'You can be part of this journey! If there\'s a feature you\'re missing or something that would make your listening experience better, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-primary underline hover:text-primary-700">let me know</a> — I\'ll do my best to make it happen.',
             thanks: 'Thank you for stopping by. I hope Voxi becomes a trusted companion for your audiobook adventures.',
             signature: '— The Developer'
         },
@@ -296,7 +310,7 @@ const translations = {
             },
             privacyFirst: {
                 title: '🔒 Privacy First',
-                description: 'All data local, no tracking, no ads, optional cloud sync'
+                description: 'Local-first library, optional iCloud sync, no ads or tracking'
             }
         },
 
@@ -340,16 +354,20 @@ const translations = {
             showDetails: 'Show all details',
             hideDetails: 'Hide details',
             totalFeatures: 'features total',
+            featureCount: '67',
+            categoriesLabel: '12 categories',
+            versionNote: 'Version 3.1.0',
             playback: {
                 title: 'Playback',
                 item1: 'Play / Pause / Stop controls',
                 item2: 'Skip forward/back (15-90 sec configurable)',
                 item3: 'Next/Previous track navigation',
                 item4: 'Seek slider for any position',
-                item5: 'Speed: 1.0×-2.0× (0.1× steps)',
+                item5: 'Speed: 0.5×–2.0× (0.1× steps, per-book memory)',
                 item6: 'Volume: 10%-100% (below system level)',
                 item7: 'Auto position save per file',
-                item8: 'Mini-player state restore (7 days)'
+                item8: 'Bookmarks, shuffle, Smart Shuffle track map',
+                item9: 'Mini-player restore, rewind on resume, voice boost EQ'
             },
             background: {
                 title: 'Background Audio',
@@ -376,8 +394,8 @@ const translations = {
                 item4: 'Custom covers from gallery/camera',
                 item5: 'Drag & drop reordering',
                 item6: 'Individual track covers & metadata',
-                item7: 'Favorites collection',
-                item8: 'Archive with preserved stats'
+                item7: 'Collections, series, sort & progress filters',
+                item8: 'Wi‑Fi Transfer, OPDS catalogs, archive with stats'
             },
             statistics: {
                 title: 'Statistics',
@@ -386,7 +404,8 @@ const translations = {
                 item3: 'Per-book completion percentage',
                 item4: 'Per-file progress tracking',
                 item5: 'Time in hours/minutes/seconds',
-                item6: 'Preserved on archive'
+                item6: 'Listening streak & dedicated stats screen',
+                item7: 'Preserved on archive, reset per book'
             },
             personalization: {
                 title: 'Personalization',
@@ -421,30 +440,51 @@ const translations = {
                 item4: 'Retry logic & error logging',
                 item5: 'Lazy loading & LRU cache',
                 item6: 'Throttled UI updates',
-                item7: 'Cloud sync (Beta)'
+                item7: 'Diagnostics and performance monitoring'
+            },
+            chapters: {
+                title: 'Chapters & Navigation',
+                item1: 'CUE file chapter navigation',
+                item2: 'Embedded M4B/M4A chapter extraction',
+                item3: 'Favorite fragments collection',
+                item4: 'Playing book indicator in library'
+            },
+            icloud: {
+                title: 'iCloud',
+                item1: 'Store audiobooks in iCloud Drive',
+                item2: 'Download on demand when playing',
+                item3: 'Download for offline listening',
+                item4: 'Automatic cache management'
+            },
+            discover: {
+                title: 'Sync & Discover',
+                item1: 'iCloud sync: progress, settings, statistics',
+                item2: 'Continue Listening widget + deep link',
+                item3: 'Siri Shortcuts & in-app news',
+                item4: 'Onboarding & CarPlay (beta)'
             }
         },
 
         // Planned Features Section
         plannedFeatures: {
-            label: '🚀 Coming Soon',
+            label: '🚀 On the Roadmap',
             title: 'Planned Features',
-            description: 'Features in active development or planned for future releases. Sorted by implementation complexity.',
+            description: 'Version 3.1.0 ships 67 features today. Here is what we are exploring next.',
             note: '💬 Have a feature request? Submit it via in-app support!',
             easy: {
-                title: 'Quick Wins',
+                title: 'Quality of Life',
                 label: 'Easy to implement',
                 item1: {
                     title: 'Pause at End of File',
-                    desc: 'Auto-stop after current track ends'
+                    desc: 'Auto-stop after the current track ends'
                 },
                 item2: {
                     title: 'Import/Export JSON',
-                    desc: 'Backup settings, playlists & progress'
+                    desc: 'Backup settings, collections, and progress'
                 },
                 item3: {
-                    title: 'Series & Author Grouping',
-                    desc: 'Auto-organize books by metadata'
+                    title: 'More Languages',
+                    desc: 'Expand beyond English and Russian'
                 }
             },
             medium: {
@@ -456,15 +496,11 @@ const translations = {
                 },
                 item2: {
                     title: 'Click & Pop Remover',
-                    desc: 'Intelligent noise suppression for vinyl digitizations'
+                    desc: 'Noise suppression for digitized vinyl sources'
                 },
                 item3: {
-                    title: 'CUE File Support',
-                    desc: 'Split single audio into chapters using CUE sheets'
-                },
-                item4: {
-                    title: 'Cloud Backup',
-                    desc: 'Auto-backup to Google Drive / iCloud'
+                    title: 'Full Library Backup',
+                    desc: 'Export entire library metadata and progress bundles'
                 }
             },
             complex: {
@@ -475,14 +511,10 @@ const translations = {
                     desc: 'Stream from network folders without copying'
                 },
                 item2: {
-                    title: 'Cross-Device Sync',
-                    desc: 'Seamless progress sync between devices'
+                    title: 'Cross-Platform Sync',
+                    desc: 'Sync library and progress beyond Apple devices'
                 },
                 item3: {
-                    title: 'Local Web Server',
-                    desc: 'Manage library via browser on local network'
-                },
-                item4: {
                     title: 'Desktop App',
                     desc: 'Windows, macOS & Linux with unified UI'
                 }
@@ -493,7 +525,7 @@ const translations = {
         download: {
             label: '📱 Device Support',
             title: 'Available for iPhone & iPad',
-            description: 'iOS 16.0 or later. Optimized for all screen sizes with split view on iPad. Portrait and landscape support.',
+            description: 'iOS 26.1 or later. Optimized for iPhone and iPad with split view, widget, Siri Shortcuts, and optional iCloud sync.',
             gettingStarted: {
                 title: 'Getting Started',
                 description: 'Add audiobook → Import files → Start listening'
@@ -534,7 +566,7 @@ const translations = {
                 downloadBtn: 'Download App'
             },
             copyright: 'All Rights Reserved.',
-            tagline: 'iOS 16.0+ • iPhone • iPad • Made with ❤️ for audiobook lovers'
+            tagline: 'iOS 26.1+ • iPhone • iPad • Version 3.1.0'
         }
     },
 
@@ -552,13 +584,13 @@ const translations = {
                 title: 'Условия использования — Voxi Book Player',
                 description: 'Условия использования приложения Voxi Book Player',
                 heading: 'Условия использования',
-                updated: 'Последнее обновление: 3 декабря 2025'
+                updated: 'Последнее обновление: 1 июля 2026'
             },
             privacy: {
                 title: 'Политика конфиденциальности — Voxi Book Player',
                 description: 'Политика конфиденциальности приложения Voxi Book Player',
                 heading: 'Политика конфиденциальности',
-                updated: 'Последнее обновление: 3 декабря 2025'
+                updated: 'Последнее обновление: 1 июля 2026'
             },
             support: {
                 title: 'Поддержка и справка — Voxi Book Player',
@@ -566,6 +598,18 @@ const translations = {
                 heading: 'Поддержка и справка',
                 subtitle: 'Возникли проблемы или вопросы? Мы готовы помочь!'
             }
+        },
+
+        a11y: {
+            switchToRussian: 'Переключить на русский',
+            switchToEnglish: 'Переключить на английский',
+            toggleMenu: 'Открыть меню навигации',
+            toggleDarkMode: 'Переключить тёмную тему',
+            appStoreDownload: 'Скачать в App Store'
+        },
+
+        stickyCta: {
+            download: 'Скачать в App Store'
         },
 
         // Support Page
@@ -576,11 +620,11 @@ const translations = {
                 title: 'Часто задаваемые вопросы (FAQ)',
                 q1: {
                     question: 'В: Как добавить аудиокниги в приложение?',
-                    answer: 'О: Voxi Book Player работает с вашими аудиофайлами. Вы можете добавить книги через iTunes File Sharing (iOS), импорт из облачных сервисов (Dropbox, Google Drive) или просто поместив файлы в папку "VoxiBooks" на устройстве.'
+                    answer: 'О: Нажмите «+» в библиотеке, чтобы импортировать из приложения «Файлы» или iCloud Drive. Также доступны Wi‑Fi Transfer (загрузка из браузера в локальной сети), OPDS-каталоги или перетаскивание файлов из других приложений. Поддерживаются MP3, M4A, M4B, FLAC, WAV, AAC, OGG и другие форматы.'
                 },
                 q2: {
                     question: 'В: Синхронизирует ли приложение прогресс между устройствами?',
-                    answer: 'О: В настоящее время прогресс и настройки хранятся локально на устройстве. Если вы включили эту опцию в настройках, данные сохраняются в локальном архиве. Облачная синхронизация между устройствами пока недоступна.'
+                    answer: 'О: Да — при входе под одним Apple ID и включённой синхронизации iCloud в настройках Voxi синхронизирует прогресс воспроизведения, настройки приложения и статистику прослушивания через iCloud Key-Value Store. Аудиокниги могут храниться в iCloud Drive с загрузкой по требованию. Полный бэкап библиотеки или синхронизация с Android/десктопом пока недоступны.'
                 },
                 q3: {
                     question: 'В: Я включил уведомления, но не получаю обновления. Почему?',
@@ -595,15 +639,15 @@ const translations = {
                 title: 'Краткое руководство',
                 item1: {
                     title: 'Импорт книг:',
-                    desc: 'Используйте кнопку "+" в разделе "Моя библиотека" для импорта файлов с устройства или облачного хранилища.'
+                    desc: 'Используйте «+» в библиотеке, Wi‑Fi Transfer, OPDS-каталоги или импорт из «Файлов» / iCloud Drive.'
                 },
                 item2: {
                     title: 'Управление воспроизведением:',
-                    desc: 'Используйте экран плеера для управления скоростью, настройки таймера сна или создания закладки.'
+                    desc: 'Настройте скорость (0.5×–2.0×), таймер сна, закладки или переход к главам CUE/M4B.'
                 },
                 item3: {
                     title: 'Организация:',
-                    desc: 'Создавайте плейлисты или используйте фильтры для сортировки библиотеки по автору, прогрессу или длительности.'
+                    desc: 'Используйте коллекции, серии, фильтры сортировки и прогресса, а также виджет «Продолжить слушать» на главном экране.'
                 }
             },
             contact: {
@@ -625,7 +669,7 @@ const translations = {
         // Privacy Page
         privacyPage: {
             heading: 'Политика конфиденциальности',
-            updated: 'Последнее обновление: 3 декабря 2025',
+            updated: 'Последнее обновление: 1 июля 2026',
             intro: 'Данная Политика конфиденциальности объясняет, как приложение Voxi Book Player собирает, использует и защищает информацию. Используя приложение, вы соглашаетесь с описанными ниже практиками.',
             related: 'Смотрите также:',
             section1: {
@@ -650,8 +694,10 @@ const translations = {
             },
             section3: {
                 title: '3. Хранение данных и безопасность',
-                item1: '<strong>Локальное хранение:</strong> История прослушивания и настройки (собранные с согласия) хранятся локально на вашем устройстве. Мы не загружаем, не передаём и не храним эти данные на наших серверах.',
-                item2: '<strong>Идентификатор устройства:</strong> Обезличенный идентификатор для уведомлений обрабатывается защищённым сервисом push-уведомлений (Apple Push Notification service для iOS) и не используется для других целей.',
+                item1: '<strong>Локальное хранение:</strong> Библиотека, история прослушивания и настройки хранятся локально на устройстве. Аудиофайлы и данные прослушивания не загружаются на серверы Voxi.',
+                item2: '<strong>iCloud (опционально):</strong> При включённом iCloud в приложении и входе на устройстве прогресс, настройки и статистика синхронизируются через Apple iCloud Key-Value Store. Аудиокниги могут использовать iCloud Drive. Это обрабатывается Apple под вашим Apple ID, а не на серверах Voxi.',
+                item3: '<strong>Поддержка и новости:</strong> Анонимный идентификатор устройства отправляется при использовании поддержки в приложении или загрузке новостей. Он связывает обращения и непрочитанные статьи с устройством. Контент аудиокниг не передаётся.',
+                item4: '<strong>Идентификатор устройства:</strong> Обрабатывается службой Apple Push Notification для доставки уведомлений. Не используется для других целей.',
                 note: 'Мы применяем коммерчески приемлемые меры безопасности для защиты минимальной обрабатываемой информации. Однако ни один метод электронной передачи или хранения не является на 100% безопасным.'
             },
             section4: {
@@ -682,7 +728,7 @@ const translations = {
         // Terms Page
         termsPage: {
             heading: 'Условия использования',
-            updated: 'Последнее обновление: 3 декабря 2025',
+            updated: 'Последнее обновление: 1 июля 2026',
             related: 'Смотрите также:',
             section1: {
                 title: '1. Принятие условий',
@@ -750,7 +796,7 @@ const translations = {
             intro: 'Представляем Voxi Book Player — наш новый плеер для аудиокниг.',
             story: 'Всё началось с моего перехода с Android на iPhone. Мне не хватало удобного плеера с привычными функциями. Вместо того чтобы искать дальше, я решил создать такой, каким хотел бы пользоваться сам.',
             humble: 'Я вкладываю в него душу и постоянно работаю над улучшениями. Для меня большая радость, если приложение поможет и вам.',
-            participate: 'Ваше мнение очень важно! Если вам чего-то не хватает или есть идеи для улучшения — пожалуйста, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-white underline hover:text-white/80">напишите мне</a>. Я с радостью всё изучу и постараюсь воплотить.',
+            participate: 'Ваше мнение очень важно! Если вам чего-то не хватает или есть идеи для улучшения — пожалуйста, <a href="mailto:yammering.firefly.wayt@mask.me" class="text-primary underline hover:text-primary-700">напишите мне</a>. Я с радостью всё изучу и постараюсь воплотить.',
             thanks: 'Спасибо, что заглянули. Надеюсь, Voxi станет вашим отличным спутником в мире книг.',
             signature: '— Разработчик Voxi'
         },
@@ -830,7 +876,7 @@ const translations = {
             },
             privacyFirst: {
                 title: '🔒 Приватность',
-                description: 'Все данные локально, без отслеживания, без рекламы'
+                description: 'Локальная библиотека, опциональная синхронизация iCloud, без рекламы и отслеживания'
             }
         },
 
@@ -874,16 +920,20 @@ const translations = {
             showDetails: 'Показать подробности',
             hideDetails: 'Свернуть',
             totalFeatures: 'функций всего',
+            featureCount: '67',
+            categoriesLabel: '12 категорий',
+            versionNote: 'Версия 3.1.0',
             playback: {
                 title: 'Воспроизведение',
                 item1: 'Play / Pause / Stop — управление воспроизведением',
                 item2: 'Перемотка вперёд/назад (15-90 сек, настраивается)',
                 item3: 'Следующий/Предыдущий трек',
                 item4: 'Ползунок перемотки в любое место',
-                item5: 'Скорость: 1.0×-2.0× (шаг 0.1×)',
+                item5: 'Скорость: 0.5×–2.0× (шаг 0.1×, память для каждой книги)',
                 item6: 'Громкость: 10%-100% (ниже системного уровня)',
                 item7: 'Автосохранение позиции каждого файла',
-                item8: 'Восстановление мини-плеера (7 дней)'
+                item8: 'Закладки, shuffle, карта треков Smart Shuffle',
+                item9: 'Восстановление мини-плеера, перемотка при возобновлении, voice boost EQ'
             },
             background: {
                 title: 'Фоновое воспроизведение',
@@ -910,8 +960,8 @@ const translations = {
                 item4: 'Свои обложки из галереи/камеры',
                 item5: 'Drag & drop сортировка',
                 item6: 'Обложки и метаданные для каждого трека',
-                item7: 'Коллекция «Избранное»',
-                item8: 'Архив с сохранением статистики'
+                item7: 'Коллекции, серии, сортировка и фильтры прогресса',
+                item8: 'Wi‑Fi Transfer, OPDS-каталоги, архив со статистикой'
             },
             statistics: {
                 title: 'Статистика',
@@ -920,7 +970,8 @@ const translations = {
                 item3: 'Процент завершения книги',
                 item4: 'Прогресс по каждому файлу',
                 item5: 'Время в часах/минутах/секундах',
-                item6: 'Сохраняется при архивации'
+                item6: 'Серия прослушивания и отдельный экран статистики',
+                item7: 'Сохраняется при архивации, сброс по книге'
             },
             personalization: {
                 title: 'Персонализация',
@@ -955,18 +1006,39 @@ const translations = {
                 item4: 'Retry logic и журналирование ошибок',
                 item5: 'Lazy loading и LRU кэш',
                 item6: 'Дросселирование UI обновлений',
-                item7: 'Облачная синхронизация (Beta)'
+                item7: 'Диагностика и мониторинг производительности'
+            },
+            chapters: {
+                title: 'Главы и навигация',
+                item1: 'Навигация по главам из CUE-файлов',
+                item2: 'Извлечение глав из встроенных M4B/M4A',
+                item3: 'Коллекция избранных фрагментов',
+                item4: 'Индикатор воспроизводимой книги в библиотеке'
+            },
+            icloud: {
+                title: 'iCloud',
+                item1: 'Хранение аудиокниг в iCloud Drive',
+                item2: 'Загрузка по требованию при воспроизведении',
+                item3: 'Загрузка для офлайн-прослушивания',
+                item4: 'Автоматическое управление кэшем'
+            },
+            discover: {
+                title: 'Синхронизация и Discover',
+                item1: 'Синхронизация iCloud: прогресс, настройки, статистика',
+                item2: 'Виджет «Продолжить слушать» + deep link',
+                item3: 'Siri Shortcuts и новости в приложении',
+                item4: 'Onboarding и CarPlay (beta)'
             }
         },
 
         // Planned Features Section
         plannedFeatures: {
-            label: '🚀 Скоро',
+            label: '🚀 В планах',
             title: 'Планируемые функции',
-            description: 'Функции в активной разработке или запланированные для будущих версий. Отсортировано по сложности реализации.',
+            description: 'Версия 3.1.0 уже включает 67 функций. Вот что мы рассматриваем дальше.',
             note: '💬 Есть идея? Отправьте запрос через поддержку в приложении!',
             easy: {
-                title: 'Быстрые улучшения',
+                title: 'Удобство',
                 label: 'Простая реализация',
                 item1: {
                     title: 'Пауза в конце файла',
@@ -974,11 +1046,11 @@ const translations = {
                 },
                 item2: {
                     title: 'Импорт/Экспорт JSON',
-                    desc: 'Резервное копирование настроек и прогресса'
+                    desc: 'Резервное копирование настроек, коллекций и прогресса'
                 },
                 item3: {
-                    title: 'Группировка по сериям и авторам',
-                    desc: 'Автоорганизация книг по метаданным'
+                    title: 'Больше языков',
+                    desc: 'Расширение за пределы английского и русского'
                 }
             },
             medium: {
@@ -990,15 +1062,11 @@ const translations = {
                 },
                 item2: {
                     title: 'Подавитель щелчков',
-                    desc: 'Интеллектуальное подавление шума для оцифровок с винила'
+                    desc: 'Подавление шума для оцифрованных виниловых записей'
                 },
                 item3: {
-                    title: 'Поддержка CUE-файлов',
-                    desc: 'Разделение аудио на главы по CUE-листам'
-                },
-                item4: {
-                    title: 'Облачный бэкап',
-                    desc: 'Автосохранение в Google Drive / iCloud'
+                    title: 'Полный бэкап библиотеки',
+                    desc: 'Экспорт метаданных библиотеки и пакетов прогресса'
                 }
             },
             complex: {
@@ -1009,14 +1077,10 @@ const translations = {
                     desc: 'Стриминг из сетевых папок без копирования'
                 },
                 item2: {
-                    title: 'Синхронизация между устройствами',
-                    desc: 'Бесшовное продолжение прослушивания'
+                    title: 'Кросс-платформенная синхронизация',
+                    desc: 'Синхронизация библиотеки и прогресса за пределами Apple-устройств'
                 },
                 item3: {
-                    title: 'Локальный веб-сервер',
-                    desc: 'Управление библиотекой через браузер'
-                },
-                item4: {
                     title: 'Десктоп-приложение',
                     desc: 'Windows, macOS и Linux с единым интерфейсом'
                 }
@@ -1027,7 +1091,7 @@ const translations = {
         download: {
             label: '📱 Устройства',
             title: 'Доступно для iPhone и iPad',
-            description: 'iOS 16.0 и новее. Оптимизировано для всех экранов с Split View на iPad. Поддержка портретной и альбомной ориентации.',
+            description: 'iOS 26.1 и новее. Оптимизировано для iPhone и iPad с Split View, виджетом, Siri Shortcuts и опциональной синхронизацией iCloud.',
             gettingStarted: {
                 title: 'Начало работы',
                 description: 'Добавить книгу → Импорт файлов → Слушать'
@@ -1068,7 +1132,7 @@ const translations = {
                 downloadBtn: 'Скачать приложение'
             },
             copyright: 'Все права защищены.',
-            tagline: 'iOS 16.0+ • iPhone • iPad • Создано с ❤️ для любителей аудиокниг'
+            tagline: 'iOS 26.1+ • iPhone • iPad • Версия 3.1.0'
         }
     }
 };
@@ -1084,15 +1148,22 @@ function getNestedValue(obj, path) {
  * Apply translations to all elements with data-i18n attribute
  */
 function applyTranslations(lang) {
-    const elements = document.querySelectorAll('[data-i18n]');
     const langData = translations[lang] || translations.en;
 
-    elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
+    document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-html');
         const translation = getNestedValue(langData, key);
-        
-        if (translation) {
+
+        if (!translation) {
+            return;
+        }
+
+        const useHtml = el.hasAttribute('data-i18n-html') || /<[a-z][\s\S]*>/i.test(translation);
+
+        if (useHtml) {
             el.innerHTML = translation;
+        } else {
+            el.textContent = translation;
         }
     });
 
@@ -1100,40 +1171,54 @@ function applyTranslations(lang) {
     const langUpper = lang.toUpperCase();
     const currentLangEl = document.getElementById('currentLang');
     const currentLangLightEl = document.getElementById('currentLangLight');
-    
-    if (currentLangEl) currentLangEl.textContent = langUpper;
-    if (currentLangLightEl) currentLangLightEl.textContent = langUpper;
+
+    if (currentLangEl) {
+        currentLangEl.textContent = langUpper;
+    }
+    if (currentLangLightEl) {
+        currentLangLightEl.textContent = langUpper;
+    }
+
+    const langSwitcher = document.getElementById('langSwitcher');
+    if (langSwitcher) {
+        const switchLabel = lang === 'ru'
+            ? (langData.a11y?.switchToEnglish || 'Switch to English')
+            : (langData.a11y?.switchToRussian || 'Switch to Russian');
+        langSwitcher.setAttribute('aria-label', switchLabel);
+        langSwitcher.setAttribute('title', switchLabel);
+    }
 
     // Update html lang attribute
     document.documentElement.lang = lang;
 
     // Check for page-specific meta tags
     const pageType = document.body.getAttribute('data-page');
-    
+
     if (pageType && langData.pages && langData.pages[pageType]) {
-        // Use page-specific meta tags
         const pageMeta = langData.pages[pageType];
-        
+
         if (pageMeta.title) {
             document.title = pageMeta.title;
             const pageTitleEl = document.getElementById('pageTitle');
-            if (pageTitleEl) pageTitleEl.textContent = pageMeta.title;
+            if (pageTitleEl) {
+                pageTitleEl.textContent = pageMeta.title;
+            }
         }
-        
+
         if (pageMeta.description) {
             const metaDescEl = document.getElementById('metaDescription');
-            if (metaDescEl) metaDescEl.setAttribute('content', pageMeta.description);
+            if (metaDescEl) {
+                metaDescEl.setAttribute('content', pageMeta.description);
+            }
         }
-        
-        // Update page heading if exists
+
         const pageHeadingEl = document.querySelector('[data-i18n-heading]');
         if (pageHeadingEl && pageMeta.heading) {
             pageHeadingEl.textContent = pageMeta.heading;
         }
-        
-        // Update page subtitle/updated if exists
+
         const pageSubtitleEl = document.querySelector('[data-i18n-subtitle]');
-        if (pageSubtitleEl) {
+        if (pageSubtitleEl && !pageSubtitleEl.hasAttribute('data-i18n')) {
             if (pageMeta.subtitle) {
                 pageSubtitleEl.textContent = pageMeta.subtitle;
             } else if (pageMeta.updated) {
@@ -1141,18 +1226,23 @@ function applyTranslations(lang) {
             }
         }
     } else {
-        // Use default meta tags for landing page
         const meta = langData.meta;
         if (meta) {
             document.title = meta.title;
             const pageTitleEl = document.getElementById('pageTitle');
-            if (pageTitleEl) pageTitleEl.textContent = meta.title;
+            if (pageTitleEl) {
+                pageTitleEl.textContent = meta.title;
+            }
 
             const metaDescEl = document.getElementById('metaDescription');
-            if (metaDescEl) metaDescEl.setAttribute('content', meta.description);
+            if (metaDescEl) {
+                metaDescEl.setAttribute('content', meta.description);
+            }
 
             const metaKeywordsEl = document.getElementById('metaKeywords');
-            if (metaKeywordsEl) metaKeywordsEl.setAttribute('content', meta.keywords);
+            if (metaKeywordsEl) {
+                metaKeywordsEl.setAttribute('content', meta.keywords);
+            }
         }
     }
 }

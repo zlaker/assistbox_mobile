@@ -1,3 +1,5 @@
+@props(['landing' => false])
+
 <!-- Footer Start -->
 <footer class="relative bg-slate-900 dark:bg-slate-800 text-gray-200 dark:text-gray-200">    
     <div class="container relative">
@@ -15,18 +17,19 @@
                             </a>
                             <p class="mt-6 text-gray-300" data-i18n="footer.description">Your personal audiobook library with powerful statistics. Track every moment, never lose progress. Built for everyone, enhanced by community.</p>
                             <ul class="list-none mt-6">
-                                <li class="inline"><a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-gray-700 text-gray-400 hover:text-white rounded-md hover:border-primary dark:hover:border-primary hover:bg-primary dark:hover:bg-primary"><i class="uil uil-apple align-middle" title="App Store"></i></a></li>
+                                <li class="inline"><a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" rel="noopener noreferrer" class="size-8 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center border border-gray-800 dark:border-gray-700 text-gray-400 hover:text-white rounded-md hover:border-primary dark:hover:border-primary hover:bg-primary dark:hover:bg-primary"><i class="uil uil-apple align-middle" title="App Store"></i></a></li>
                             </ul><!--end icon-->
                         </div><!--end col-->
                 
                         <div class="lg:col-span-2 md:col-span-4">
                             <h5 class="tracking-[1px] text-gray-100 font-semibold" data-i18n="footer.app.title">App</h5>
                             <ul class="list-none footer-list mt-6">
-                                <li><a href="{{ route('home') }}#features" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.features">Features</span></a></li>
-                                <li class="mt-[10px]"><a href="{{ route('home') }}#about" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.statistics">Statistics</span></a></li>
-                                <li class="mt-[10px]"><a href="{{ route('home') }}#testimonials" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.whyVoxi">Why Voxi</span></a></li>
-                                <li class="mt-[10px]"><a href="{{ route('home') }}#download" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.download">Download</span></a></li>
-                                <li class="mt-[10px]"><a href="{{ route('home') }}#news" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.news">News</span></a></li>
+                                <li><a href="{{ $landing ? '#features' : route('home') . '#features' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.features">Features</span></a></li>
+                                <li class="mt-[10px]"><a href="{{ $landing ? '#about' : route('home') . '#about' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.statistics">Statistics</span></a></li>
+                                <li class="mt-[10px]"><a href="{{ $landing ? '#testimonials' : route('home') . '#testimonials' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.whyVoxi">Why Voxi</span></a></li>
+                                <li class="mt-[10px]"><a href="{{ $landing ? '#all-features' : route('home') . '#all-features' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.allFeatures">All Features</span></a></li>
+                                <li class="mt-[10px]"><a href="{{ $landing ? '#download' : route('home') . '#download' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.download">Download</span></a></li>
+                                <li class="mt-[10px]"><a href="{{ $landing ? '#news' : route('home') . '#news' }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.news">News</span></a></li>
                             </ul>
                         </div><!--end col-->
                 
@@ -36,7 +39,7 @@
                                 <li><a href="{{ route('ios.terms') }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="footer.legal.terms">Terms of Service</span></a></li>
                                 <li class="mt-[10px]"><a href="{{ route('ios.privacy') }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="footer.legal.privacy">Privacy Policy</span></a></li>
                                 <li class="mt-[10px]"><a href="{{ route('ios.support') }}" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> <span data-i18n="nav.support">Support</span></a></li>
-                                <li class="mt-[10px]"><a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> App Store</a></li>
+                                <li class="mt-[10px]"><a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-gray-400 duration-500 ease-in-out"><i class="uil uil-angle-right-b"></i> App Store</a></li>
                             </ul>
                         </div><!--end col-->
 
@@ -48,7 +51,7 @@
                                 <li class="mb-2 flex items-center text-gray-300"><i class="uil uil-check-circle text-primary me-2"></i> <span data-i18n="footer.support.item2">Direct team communication</span></li>
                                 <li class="mb-2 flex items-center text-gray-300"><i class="uil uil-check-circle text-primary me-2"></i> <span data-i18n="footer.support.item3">Feature request submission</span></li>
                             </ul>
-                            <a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" class="py-2 px-5 mt-4 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-700 border-primary hover:border-primary-700 text-white rounded-md" data-i18n="footer.support.downloadBtn">Download App</a>
+                            <a href="https://apps.apple.com/us/app/voxi-book-player/id6756003204" target="_blank" rel="noopener noreferrer" class="py-2 px-5 mt-4 inline-block font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-primary hover:bg-primary-700 border-primary hover:border-primary-700 text-white rounded-md" data-i18n="footer.support.downloadBtn">Download App</a>
                         </div><!--end col-->
                     </div><!--end grid-->
                 </div><!--end col-->
@@ -64,7 +67,7 @@
                 </div>
 
                 <div class="md:text-end text-center mt-6 md:mt-0">
-                    <span class="text-gray-400 text-sm" data-i18n="footer.tagline">iOS 16.0+ • iPhone • iPad • Made with ❤️ for audiobook lovers</span>
+                    <span class="text-gray-400 text-sm" data-i18n="footer.tagline">iOS 26.1+ • iPhone • iPad • Version 3.1.0</span>
                 </div>
             </div><!--end grid-->
         </div><!--end container-->

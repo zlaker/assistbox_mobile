@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <title id="pageTitle">{{ $title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta id="metaDescription" name="description" content="{{ $description }}">
         <meta id="metaKeywords" name="keywords" content="{{ $keywords }}">
         <meta name="author" content="Voxi Book Player">
@@ -56,6 +56,7 @@
         <link href="{{ asset('landing/assets/libs/@iconscout/unicons/css/line.css') }}" type="text/css" rel="stylesheet">
         <link href="{{ asset('landing/assets/libs/@mdi/font/css/materialdesignicons.min.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('landing/assets/css/tailwind.css') }}">
+        <link rel="stylesheet" href="{{ asset('landing/assets/css/landing-extras.css') }}">
 
         <!-- Yandex.Metrika counter -->
         <script type="text/javascript">
@@ -71,23 +72,28 @@
         <noscript><div><img src="https://mc.yandex.ru/watch/105790963" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
+        @stack('head')
     </head>
     
-    <body class="font-nunito text-base text-slate-900 dark:text-white dark:bg-slate-900" @if($page) data-page="{{ $page }}" @endif>
+    <body class="font-nunito text-base text-slate-900 dark:text-white dark:bg-slate-900 overflow-x-hidden{{ $landing ? ' landing-page' : '' }}" @if($page) data-page="{{ $page }}" @endif>
         
         <x-landing.header :landing="$landing" />
 
         {{ $slot }}
 
-        <x-landing.footer />
+        <x-landing.footer :landing="$landing" />
+
+        @if($landing)
+            <x-landing.mobile-download-cta />
+        @endif
 
         <!-- Back to top -->
-        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-primary text-white leading-9"><i class="uil uil-arrow-up"></i></a>
+        <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 {{ $landing ? 'bottom-24 md:bottom-5' : 'bottom-5' }} end-5 size-9 text-center bg-primary text-white leading-9"><i class="uil uil-arrow-up"></i></a>
 
         <!-- Switcher -->
         <div class="fixed top-[30%] -right-2 z-50">
             <span class="relative inline-block rotate-90">
-                <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" />
+                <input type="checkbox" class="checkbox opacity-0 absolute" id="chk" aria-label="Toggle dark mode" />
                 <label class="label bg-slate-900 dark:bg-white shadow-sm dark:shadow-gray-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
                     <i class="uil uil-moon text-[20px] text-yellow-500"></i>
                     <i class="uil uil-sun text-[20px] text-yellow-500"></i>
@@ -101,6 +107,17 @@
         <script src="{{ asset('landing/assets/libs/feather-icons/feather.min.js') }}"></script>
         <script src="{{ asset('landing/assets/js/plugins.init.js') }}"></script>
         <script src="{{ asset('landing/assets/js/app.js') }}"></script>
-        <script src="{{ asset('landing/assets/js/i18n.js') }}"></script>
+        <script src="{{ asset('landing/assets/js/i18n.js') . ($landing ? '?v=' . time() : '') }}"></script>
+        <script>
+            (function () {
+                var hash = window.location.hash.replace('#', '');
+                if (hash === 'privacy') {
+                    window.location.replace('{{ route('ios.privacy') }}');
+                } else if (hash === 'terms') {
+                    window.location.replace('{{ route('ios.terms') }}');
+                }
+            })();
+        </script>
+        @stack('scripts')
     </body>
 </html>
