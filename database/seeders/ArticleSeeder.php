@@ -13,7 +13,7 @@ class ArticleSeeder extends Seeder
             ['title' => 'Voxi Book Player 3.1 — What\'s New'],
             [
                 'text' => <<<'MD'
-**Voxi Book Player 3.1** is live on the App Store.
+**Voxi Book Player 3.1** is coming soon to the App Store.
 
 ### Highlights
 
@@ -29,7 +29,7 @@ Plus everything from 3.0.0: Continue Listening widget, Siri Shortcuts, onboardin
 
 ---
 
-**Voxi Book Player 3.1** уже доступен в App Store.
+**Voxi Book Player 3.1** скоро выйдет в App Store.
 
 ### Главное
 
