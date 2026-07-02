@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\NewsReadController;
 use App\Http\Controllers\Api\SupportController;
+use App\Http\Controllers\Api\BackupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,9 @@ Route::post('news/read/{article_id}', [NewsReadController::class, 'store']);
 Route::post('ios/support', [SupportController::class, 'store']);
 Route::get('ios/support/tickets', [SupportController::class, 'tickets']);
 Route::post('ios/support/read/{id}', [SupportController::class, 'markAsRead']);
+
+// Backup endpoints
+Route::post('backup', [BackupController::class, 'store']);
+Route::get('backup/{deviceId}', [BackupController::class, 'show']);
+Route::get('backup/{deviceId}/list', [BackupController::class, 'index']);
+Route::delete('backup/{deviceId}/{backupId}', [BackupController::class, 'destroy']);
